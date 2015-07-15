@@ -7,4 +7,5 @@
 * sensible.vim
 * auto-pairs
 
-## To setup, just run the `setup.sh` in the project root
+## To setup:
+Just run the `setup.sh` in the project root
