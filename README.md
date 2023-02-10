@@ -6,5 +6,9 @@ Just some dotfiles containing common configurations for linux systems to speed u
 * sensible.vim
 * auto-pairs
 
+## Dependencies (Ensure these are installed before you run the setup script):
+* ZSH
+* [Starship Prompt](https://starship.rs/)
+
 ## To setup:
 Just run the `setup.sh` in the project root
