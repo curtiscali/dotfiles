@@ -11,4 +11,7 @@ Just some dotfiles containing common configurations for linux systems to speed u
 * [Starship Prompt](https://starship.rs/)
 
 ## To setup:
-Just run the `setup.sh` in the project root
+### If setting up on MacOS
+Run `./setup-macos` in the project root
+### if setting up on Linux
+Run `./setup-linux` in the project root
