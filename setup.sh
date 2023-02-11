@@ -1,14 +1,13 @@
 #!/bin/bash
 
-shopt -s dotglob                                                                
-for file in .*                                                                  
-do                                                                              
-    filename=$(basename "$file")
+cp .vimrc $HOME
+cp .zshrc $HOME
+cp .bashrc $HOME
 
-    if [ -e "$HOME/$filename" ]; then
-        if [ "$filename" != "."  ] && [ "$filename" != ".."  ]; then
-            homePath="$HOME/$filename"
-            rm "$homePath" && ln -s "$file" "$HOME/$filename"
-        fi
-    fi                                                                          
-done  
+STARSHIP_CONFIG_DIR=$HOME/config
+
+if [! -d "$STARSHIP_CONFIG_DIR"]; then
+    mkdir $STARSHIP_CONFIG_DIR
+fi
+
+cp starship.toml $STARSHIP_CONFIG_DIR
