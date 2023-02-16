@@ -100,7 +100,5 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-eval "$(starship init zsh)"
+alias zshconfig="mate ~/.zshrc"
+alias ohmyzsh="mate ~/.oh-my-zsh"
