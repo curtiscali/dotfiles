@@ -1,17 +1,17 @@
-# Set $GEM_HOME for ruby devenv
+# Set $GEM_HOME environment variable
 export GEM_HOME="$HOME/gems"
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/gems/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-# export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -28,7 +28,7 @@ export PATH=$HOME/gems/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
@@ -73,6 +73,9 @@ export PATH=$HOME/gems/bin:$HOME/bin:/usr/local/bin:$PATH
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+plugins=(git python ruby vscode node rust)
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -96,7 +99,7 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# Custom aliases
+# Example aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
