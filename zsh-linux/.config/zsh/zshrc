@@ -24,9 +24,6 @@ autoload -Uz colors && colors
 
 source $ZDOTDIR/zsh-functions
 
-# Add in aliases
-source $ZDOTDIR/zsh-aliases
-
 # Add in any custom files I need here
 zsh_add_file "zsh-prompt"
 
