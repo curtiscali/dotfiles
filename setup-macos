@@ -1,6 +1,0 @@
-#!/bin/zsh
-
-touch $HOME/.hushlogin
-
-cp .vimrc $HOME
-cp macos/.zshrc $HOME
