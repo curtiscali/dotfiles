@@ -49,3 +49,7 @@ bindkey '^[[3~' delete-char
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
+
+# Add Code to enable proper functioning of Ruby Gems (Needed for Jekyll Dev)
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
