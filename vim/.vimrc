@@ -6,3 +6,4 @@ set cc=80
 set ts=4
 set et
 set sw=4
+set number
