@@ -3,7 +3,6 @@ syntax on
 filetype plugin indent on
 filetype plugin on
 
-set updatetime=100
 set cc=80
 set ts=4
 set et
@@ -14,3 +13,8 @@ let g:NERDCreateDefaultMappings = 1
 let g:airline#extensions#tabline#enabled = 1
 
 map <F5> :NERDTreeToggle<CR>
+
+let g:floaterm_keymap_new    = '<F7>'
+let g:floaterm_keymap_prev   = '<F8>'
+let g:floaterm_keymap_next   = '<F9>'
+let g:floaterm_keymap_toggle = '<F12>'
