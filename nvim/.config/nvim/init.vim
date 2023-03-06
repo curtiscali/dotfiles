@@ -2,7 +2,6 @@ lua require('plugins')
 
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
-Plug 'EdenEast/nightfox.nvim'
 Plug 'voldikss/vim-floaterm'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
@@ -11,7 +10,6 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 colorscheme monokai-pro
-
 filetype plugin indent on
 filetype plugin on
 
