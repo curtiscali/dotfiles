@@ -28,3 +28,5 @@ vim.cmd([[
 ]])
 
 vim.keymap.set('n', '<F5>', ':NERDTreeToggle<R>')
+vim.keymap.set('n', '<F7>', ':FloatermNew<CR>', { silent = true })
+vim.keymap.set('t', '<F7>', '<C-\><C-n>:FloatermNew<CR>', { silent = true })
