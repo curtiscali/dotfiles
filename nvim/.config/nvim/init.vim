@@ -1,3 +1,5 @@
+lua require('plugins')
+
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 Plug 'EdenEast/nightfox.nvim'
@@ -5,7 +7,6 @@ Plug 'voldikss/vim-floaterm'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'loctvl842/monokai-pro.nvim'
 
 call plug#end()
 
