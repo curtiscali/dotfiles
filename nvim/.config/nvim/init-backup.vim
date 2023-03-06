@@ -9,7 +9,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
-colorscheme monokai-pro
+colorscheme nightfox
 filetype plugin indent on
 filetype plugin on
 

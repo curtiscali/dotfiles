@@ -15,6 +15,8 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    use "EdenEast/nightfox.nvim"
+
     use {
         "loctvl842/monokai-pro.nvim",
         config = function()
