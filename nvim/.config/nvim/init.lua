@@ -3,7 +3,6 @@ require 'plugins'
 local Plug = require 'usermod.vim-plug'
 Plug.begin('~/.config/nvim/plugged')
 
-Plug 'voldikss/vim-floaterm'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'

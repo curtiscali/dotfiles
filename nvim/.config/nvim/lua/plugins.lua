@@ -15,6 +15,8 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    use 'voldikss/vim-floaterm'
+
     use "EdenEast/nightfox.nvim"
 
     use {
