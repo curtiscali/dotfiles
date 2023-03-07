@@ -1,3 +1,6 @@
+-- This Code is based on an interface I found here: https://dev.to/vonheikemen/neovim-using-vim-plug-in-lua-3oom
+-- This helps me use vim plug in my init.lua file seamlessly
+
 local configs = {
   lazy = {},
   start = {}
