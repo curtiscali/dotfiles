@@ -3,6 +3,7 @@ require 'plugins'
 local Plug = require 'usermod.vim-plug'
 Plug.begin('~/.config/nvim/plugged')
 
+Plug 'voldikss/vim-floaterm'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -25,12 +26,12 @@ vim.cmd([[
     let g:airline#extensions#tabline#enabled = 1
 ]])
 
-vim.keymap.set('', '<F5>', '<cmd>:NERDTreeToggle<cr>')
-vim.keymap.set('n', '<F7>', '<cmd>:FloatermNew<cr>', { silent = true })
-vim.keymap.set('t', '<F7>', '<cmd>:FloatermNew<cr>', { silent = true })
-vim.keymap.set('n', '<F8>', '<cmd>:FloatermPrev<cr>', { silent = true })
-vim.keymap.set('t', '<F8>', '<cmd>:FloatermPrev<cr>', { silent = true })
-vim.keymap.set('n', '<F9>', '<cmd>:FloatermNext<cr>', { silent = true })
-vim.keymap.set('t', '<F9>', '<cmd>:FloatermNext<cr>', { silent = true })
-vim.keymap.set('n', '<F12>', '<cmd>:FloatermToggle<cr>', { silent = true })
-vim.keymap.set('t', '<F12>', '<cmd>:FloatermToggle<cr>', { silent = true })
+vim.keymap.set('', '<F5>', '<cmd>NERDTreeToggle<cr>')
+vim.keymap.set('n', '<F7>', '<cmd>FloatermNew<cr>', { silent = true })
+vim.keymap.set('t', '<F7>', '<cmd>FloatermNew<cr>', { silent = true })
+vim.keymap.set('n', '<F8>', '<cmd>FloatermPrev<cr>', { silent = true })
+vim.keymap.set('t', '<F8>', '<cmd>FloatermPrev<cr>', { silent = true })
+vim.keymap.set('n', '<F9>', '<cmd>FloatermNext<cr>', { silent = true })
+vim.keymap.set('t', '<F9>', '<cmd>FloatermNext<cr>', { silent = true })
+vim.keymap.set('n', '<F12>', '<cmd>FloatermToggle<cr>', { silent = true })
+vim.keymap.set('t', '<F12>', '<cmd>FloatermToggle<cr>', { silent = true })
