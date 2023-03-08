@@ -7,6 +7,13 @@ Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug('junegunn/fzf', {
+    run = function()
+        vim.fn['fzf#install']()
+    end
+})
+Plug 'junegunn/fzf.vim'
+
 Plug.ends()
 
 vim.cmd.colorscheme('nightfox')
