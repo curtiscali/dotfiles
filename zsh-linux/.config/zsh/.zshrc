@@ -24,7 +24,7 @@ zle -N down-line-or-beginning-search
 # Colors
 autoload -Uz colors && colors
 
-source ./zsh-functions
+source $ZDOTDIR/zsh-functions
 
 # Add in any custom files I need here
 zsh_add_file "zsh-prompt"
