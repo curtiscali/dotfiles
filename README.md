@@ -1,5 +1,5 @@
 # Dotfiles Repo
-Just some dotfiles containing common configurations for linux systems to speed up machine setup
+Just some dotfiles containing common configurations for linux and MacOS systems to speed up machine setup
 
 ## Plugins to install for Vim
 * Pathogen
@@ -16,14 +16,24 @@ Just some dotfiles containing common configurations for linux systems to speed u
 * Tofi
 * Swayimg
 
+### Vim
+Ensure that [Vim Plug](https://github.com/junegunn/vim-plug) is installed.
+* Open vim and run `:PlugInstall` 
+
+### Neovim
+Ensure that [Vim Plug](https://github.com/junegunn/vim-plug) and [Packer.nvim](https://github.com/wbthomason/packer.nvim) have been installed.
+* Open neovim and run `:PackerSync` and `:PlugInstall`
+
 ## To setup:
 Thanks to the wonderful discovery of [GNU Stow](https://www.gnu.org/software/stow/manual/stow.html), this project is set up to use GNU Stow to install various dotfiles where needed.
 
-To do so, simply run `stow <name of module>`
+To do so, simply run `` or `stow <name of module>`
+
 ### Available Modules for Installation
 * bash
 * starship
 * vim
+* nvim
 * zsh-linux (for setting up zsh on any specific linux distribution)
 * zsh-macos (for setting up zsh on MacOS)
 * kitty
