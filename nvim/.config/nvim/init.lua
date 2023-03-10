@@ -4,6 +4,9 @@ local Plug = require 'usermod.vim-plug'
 Plug.begin('~/.config/nvim/plugged')
 
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -24,11 +27,13 @@ vim.opt.ts = 4
 vim.opt.et = true
 vim.opt.sw = 4
 vim.opt.number = true
+vim.opt.encoding = 'UTF-8'
 
 vim.cmd([[
     filetype plugin indent on
     filetype plugin on
     let g:NERDCreateDefaultMappings = 1
+    let NERDTreeShowHidden = 1
     let g:airline#extensions#tabline#enabled = 1
 ]])
 
