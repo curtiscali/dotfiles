@@ -1,11 +1,6 @@
 # Dotfiles Repo
 Just some dotfiles containing common configurations for linux and MacOS systems to speed up machine setup
 
-## Plugins to install for Vim
-* Pathogen
-* sensible.vim
-* auto-pairs
-
 ## Dependencies (Ensure these are installed before stowing certain modules):
 * GNU Stow (Look up distro-specific instructions for installation) 
 * ZSH (Only if you want to use any of the zsh dotfiles)
@@ -27,7 +22,7 @@ Ensure that [Vim Plug](https://github.com/junegunn/vim-plug) and [Packer.nvim](h
 ## To setup:
 Thanks to the wonderful discovery of [GNU Stow](https://www.gnu.org/software/stow/manual/stow.html), this project is set up to use GNU Stow to install various dotfiles where needed.
 
-To do so, simply run `` or `stow <name of module>`
+To do so, simply run `stow *` to install all config files or `stow <name of module>` to install only the modules you need
 
 ### Available Modules for Installation
 * bash
