@@ -4,6 +4,8 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+exec export ZDOTDIR=$HOME/.config/zsh
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -45,12 +47,9 @@ bindsym $mod+l exec $lockman
 
 ### Input configuration
 
-# start IBus
-exec ibus-daemon --xim --panel=disable
-exec ibus restart
 
 # NOTE! $mod+space is typically for something else...
-bindsym Ctrl+$mod+space exec ${HOME}/.config/sway/scripts/nextkb
+#bindsym Ctrl+$mod+space exec ${HOME}/.config/sway/scripts/nextkb
 
 #input "" {
 #
