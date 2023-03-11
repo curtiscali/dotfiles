@@ -24,6 +24,9 @@ zle -N down-line-or-beginning-search
 # Colors
 autoload -Uz colors && colors
 
+# Completions
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+
 source $ZDOTDIR/zsh-functions
 
 # Add in any custom files I need here
