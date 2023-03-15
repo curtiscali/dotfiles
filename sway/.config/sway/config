@@ -4,6 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+# Ensure ZDOTDIR is properly set
 exec export ZDOTDIR=$HOME/.config/zsh
 
 ### Variables
@@ -39,21 +40,20 @@ exec swayidle -w \
 set $lockman exec bash ~/.config/sway/lockman.sh
 bindsym $mod+l exec $lockman
 
-# Example configuration:
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
 ### Input configuration
-
-
 # NOTE! $mod+space is typically for something else...
+
+# Set necessary environment variables (these are also set in /etc/environment)
+#exec export GTK_IM_MODULE=ibus
+#exec export QT_IM_MODULE=ibus
+
+exec ibus-daemon -dr
+bindsym Ctrl+$mod+Space exec sh -c 'if [ "$(ibus engine)" = "libpinyin" ]; then ibus engine xkb:us::eng; else ibus engine libpinyin; fi'
 #bindsym Ctrl+$mod+space exec ${HOME}/.config/sway/scripts/nextkb
 
-#input "" {
-#
-#}
+input "type:keyboard" {
+    xkb_layout us
+}
 
 # Example configuration:
 #
@@ -97,6 +97,8 @@ font Cantarell Bold 11
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+
 #
 # Moving around:
 #
@@ -211,9 +213,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Volume controls
-bindsym XF86AudioRaiseVolume exec amixer -q sset Master 1%+
-bindsym XF86AudioLowerVolume exec amixer -q sset Master 1%-
-bindsym XF86AudioMute exec amixer -q sset Master toggle
+bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
 
 # Browser shortcut
 bindsym Ctrl+Alt+B exec firefox
