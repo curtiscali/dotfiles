@@ -31,6 +31,7 @@ source $ZDOTDIR/zsh-functions
 
 # Add in any custom files I need here
 zsh_add_file "zsh-prompt"
+zsh_add_file "zsh-aliases"
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
