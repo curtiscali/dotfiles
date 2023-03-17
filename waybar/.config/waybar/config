@@ -13,7 +13,6 @@
         "network", 
         "keyboard-state",
         "custom/keyboard",
-        "sway/language", 
         "tray"
     ],
     // Modules configuration

@@ -48,13 +48,10 @@ bindsym $mod+l exec $lockman
 #exec export GTK_IM_MODULE=ibus
 #exec export QT_IM_MODULE=ibus
 
-exec ibus-daemon -dr
-bindsym Ctrl+$mod+Space exec sh -c 'if [ "$(ibus engine)" = "libpinyin" ]; then ibus engine xkb:us::eng; else ibus engine libpinyin; fi'
+#exec ibus-daemon -dr
+exec fcitx5 -d
+#bindsym Ctrl+$mod+Space exec sh -c 'if [ "$(ibus engine)" = "libpinyin" ]; then ibus engine xkb:us::eng; else ibus engine libpinyin; fi'
 #bindsym Ctrl+$mod+space exec ${HOME}/.config/sway/scripts/nextkb
-
-input "type:keyboard" {
-    xkb_layout us
-}
 
 # Example configuration:
 #
