@@ -31,7 +31,7 @@ output DP-3 {
 output * bg $HOME/Pictures/macOS-Ventura-new-wallpaper-1.webp fill
 
 ### Idle configuration
-set $lock swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"
+set $lock swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %B %d %Y" --timestr "%H:%M" 
 exec swayidle -w \
   timeout 600 $lock \
   timeout 570 'swaymsg "output * dpms off"' \
