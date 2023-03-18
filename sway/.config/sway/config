@@ -22,7 +22,8 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu tofi-run -c $HOME/.config/tofi/config | xargs swaymsg exec --
+#set $menu tofi-run -c $HOME/.config/tofi/config | xargs swaymsg exec --
+set $menu wofi --show run --insensitive --prompt 'Run Application' --width 300 --style $HOME/.config/wofi/menu.css | xargs swaymsg exec --
 
 ### Output configuration
 output DP-3 {

@@ -1,9 +1,9 @@
 #!/usr/bin/lua
 local options = {
-    ["  Lock"] = "swaylock",
-    ["  Shut down"] = "systemctl poweroff",
-    ["  Reboot"] = "systemctl reboot",
-    ["﫼 Log out"] = "swaymsg exit",
+    ["   Lock"] = "$HOME/.config/sway/lockman.sh",
+    ["   Shut down"] = "systemctl poweroff",
+    ["   Reboot"] = "systemctl reboot",
+    ["﫼  Log out"] = "swaymsg exit",
 --    ["鈴 Suspend"] = "systemctl suspend",
 --    [" Hibernate"] = "systemctl hibernate",
 }
