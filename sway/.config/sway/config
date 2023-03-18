@@ -41,28 +41,8 @@ exec swayidle -w \
 set $lockman exec bash ~/.config/sway/lockman.sh
 bindsym $mod+l exec $lockman
 
-### Input configuration
-# NOTE! $mod+space is typically for something else...
-
-# Set necessary environment variables (these are also set in /etc/environment)
-#exec export GTK_IM_MODULE=ibus
-#exec export QT_IM_MODULE=ibus
-
-#exec ibus-daemon -dr
 exec fcitx5 -d
-#bindsym Ctrl+$mod+Space exec sh -c 'if [ "$(ibus engine)" = "libpinyin" ]; then ibus engine xkb:us::eng; else ibus engine libpinyin; fi'
-#bindsym Ctrl+$mod+space exec ${HOME}/.config/sway/scripts/nextkb
 
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
 font Cantarell Bold 11
@@ -94,8 +74,7 @@ font Cantarell Bold 11
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-
+    bindsym --to-code $mod+Shift+e exec $HOME/.config/wofi/powermenu
 
 #
 # Moving around:
