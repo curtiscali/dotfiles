@@ -3,6 +3,14 @@
 # Ensure ZDOTDIR is properly set
 exec export ZDOTDIR=$HOME/.config/zsh
 
+title_align center
+
+gaps inner 5
+smart_gaps on
+
+# Activate smart borders (only when there are effectively no gaps)
+smart_borders no_gaps
+
 # Set the font
 font Cantarell Bold 11
 
