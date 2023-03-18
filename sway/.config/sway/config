@@ -3,6 +3,9 @@
 # Ensure ZDOTDIR is properly set
 exec export ZDOTDIR=$HOME/.config/zsh
 
+# Set the font
+font Cantarell Bold 11
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -47,7 +50,9 @@ exec fcitx5 -d
 
 # Read `man 5 sway-input` for more information about this section.
 
-font Cantarell Bold 11
+input "type:keyboard" {
+    xkb_numlock enabled
+}
 
 ### Key bindings
 #
