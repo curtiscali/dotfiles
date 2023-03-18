@@ -1,4 +1,6 @@
 export ZDOTDIR=$HOME/.config/zsh
+export SUDO_EDITOR=nvim
+export EDITOR=nvim
 
 # some useful options (man zshoptions)
 setopt autocd extendedglob nomatch menucomplete
