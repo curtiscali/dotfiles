@@ -1,7 +1,3 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
 # Read `man 5 sway` for a complete reference.
 
 # Ensure ZDOTDIR is properly set
@@ -16,14 +12,18 @@ set $left h
 set $down j
 set $up k
 set $right l
+
+# Your preferred Web Browser
+set $browser firefox
+
 # Your preferred terminal emulator
 set $term alacritty
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-#set $menu tofi-run -c $HOME/.config/tofi/config | xargs swaymsg exec --
-set $menu wofi --show run --insensitive --prompt 'Run Application' --width 300 --style $HOME/.config/wofi/menu.css | xargs swaymsg exec --
+set $menu wofi --show run --insensitive --prompt 'Run Application' \
+    --width 300 --style $HOME/.config/wofi/menu.css | xargs swaymsg exec --
 
 ### Output configuration
 output DP-3 {
@@ -42,6 +42,7 @@ exec swayidle -w \
 set $lockman exec bash ~/.config/sway/lockman.sh
 bindsym $mod+l exec $lockman
 
+# Start FCITX to ensure we have an IME
 exec fcitx5 -d
 
 # Read `man 5 sway-input` for more information about this section.
@@ -51,7 +52,16 @@ font Cantarell Bold 11
 ### Key bindings
 #
 # Basics:
-#
+
+    # Volume controls
+    bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+
+    # Browser shortcut
+    bindsym Ctrl+Alt+B exec $browser
+
+
     # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -189,14 +199,6 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
-
-# Volume controls
-bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
-bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
-
-# Browser shortcut
-bindsym Ctrl+Alt+B exec firefox
 
 # Status Bar:
 #
