@@ -50,9 +50,6 @@ exec swayidle -w \
   resume 'swaymsg "output * dpms on"' \
   before-sleep $lock
 
-set $lockman exec bash ~/.config/sway/lockman.sh
-bindsym $mod+l exec $lockman
-
 # Start FCITX to ensure we have an IME
 exec fcitx5 -d
 
@@ -70,10 +67,16 @@ input "type:keyboard" {
     bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
     bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+    bindsym --locked XF86AudioPlay exec playerctl play-pause
+    bindsym --locked XF86AudioNext exec playerctl next
+    bindsym --locked XF86AudioPrev exec playerctl previous
 
     # Browser shortcut
     bindsym Ctrl+Alt+B exec $browser
 
+    # Set up lock binding
+    set $lockman exec bash ~/.config/sway/lockman.sh
+    bindsym $mod+l exec $lockman
 
     # Start a terminal
     bindsym $mod+Return exec $term
@@ -83,9 +86,6 @@ input "type:keyboard" {
 
     # Start your launcher
     bindsym $mod+d exec $menu
-
-    # Setup auto screen lock
-    bindsym Ctrl+l exec swaylock 
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
