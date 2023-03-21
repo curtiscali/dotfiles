@@ -1,0 +1,5 @@
+font=Cantarell 11
+height=150
+
+[!grouped]
+format=<b>%a</b>\n<b>%s</b>\n%b
