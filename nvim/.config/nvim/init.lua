@@ -1,14 +1,13 @@
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 require 'plugins'
 
 local Plug = require 'usermod.vim-plug'
 Plug.begin('~/.config/nvim/plugged')
 
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
 Plug('junegunn/fzf', {
     run = function()
@@ -19,8 +18,10 @@ Plug 'junegunn/fzf.vim'
 
 Plug.ends()
 
-vim.cmd.colorscheme('nightfox')
+vim.cmd.colorscheme('tokyonight-storm')
 
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
 vim.opt.updatetime = 100
 vim.opt.cc = '80'
 vim.opt.ts = 4
@@ -32,13 +33,17 @@ vim.opt.encoding = 'UTF-8'
 vim.cmd([[
     filetype plugin indent on
     filetype plugin on
-    let g:NERDCreateDefaultMappings = 1
-    let NERDTreeShowHidden = 1
-    let g:airline#extensions#tabline#enabled = 1
 ]])
 
--- NERDTree Mappings
-vim.keymap.set('', '<F5>', '<cmd>NERDTreeToggle<cr>')
+require('nvim-tree').setup()
+require('lualine').setup({
+    options = {
+        theme = 'tokyonight'
+    }
+})
+
+-- NvimTree Mappings
+vim.keymap.set('', '<F5>', '<cmd>NvimTreeToggle<cr>')
 
 -- Floaterm Mappings
 vim.keymap.set('n', '<F7>', '<cmd>FloatermNew<cr>', { silent = true })

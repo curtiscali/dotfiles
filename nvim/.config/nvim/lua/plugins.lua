@@ -20,6 +20,8 @@ return require('packer').startup(function(use)
 
     use "EdenEast/nightfox.nvim"
 
+    use 'folke/tokyonight.nvim'
+
     use {
         "loctvl842/monokai-pro.nvim",
         config = function()
@@ -32,6 +34,21 @@ return require('packer').startup(function(use)
         config = function()
             require("nvim-autopairs").setup {}
         end
+    }
+
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+    }
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 
+            'kyazdani42/nvim-web-devicons',
+            opt = true 
+        }
     }
 
     -- Automatically set up your configuration after cloning packer.nvim
