@@ -53,6 +53,13 @@ exec swayidle -w \
 # Start FCITX to ensure we have an IME
 exec fcitx5 -d
 
+#Start startup programs
+workspace 1
+exec $browser
+workspace 2
+exec $term
+workspace 1
+
 # Read `man 5 sway-input` for more information about this section.
 
 input "type:keyboard" {
