@@ -1,4 +1,6 @@
 # Read `man 5 sway` for a complete reference.
+include /etc/sway/config.d/*
+
 
 # Ensure ZDOTDIR is properly set
 exec export ZDOTDIR=$HOME/.config/zsh
@@ -49,6 +51,12 @@ exec swayidle -w \
   timeout 570 'swaymsg "output * dpms off"' \
   resume 'swaymsg "output * dpms on"' \
   before-sleep $lock
+
+# Start notification service
+exec mako
+
+# Polkit authentication is necessary for logging in as root in apps.
+exec lxpolkit
 
 # Start FCITX to ensure we have an IME
 exec fcitx5 -d
@@ -243,11 +251,3 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
-
-# Start notification service
-exec mako
-
-# Polkit authentication is necessary for logging in as root in apps.
-exec lxpolkit
-
-include /etc/sway/config.d/*
