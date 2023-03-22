@@ -1,14 +1,14 @@
 window {
-    font-family: Cantarell, FontAwesome;
+    font-family: Atkinson Hyperlegible, FontAwesome;
     font-weight: bold;
     margin: 5px;
-    border: 5px solid #2B5879;
+    border: 3px solid #2B5879;
     background-color: white;
 }
 
 #input {
     margin: 5px;
-    border: 2px solid #2B5879;
+    border: 3px solid #2B5879;
     border-radius: 0;
     background-color: white;
 }
