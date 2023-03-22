@@ -44,6 +44,7 @@ require('lualine').setup({
 
 -- NvimTree Mappings
 vim.keymap.set('', '<F5>', '<cmd>NvimTreeToggle<cr>')
+vim.keymap.set('', '<F6>', '<cmd>NvimTreeFocus<cr>')
 
 -- Floaterm Mappings
 vim.keymap.set('n', '<F7>', '<cmd>FloatermNew<cr>', { silent = true })
