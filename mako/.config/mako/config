@@ -1,7 +1,7 @@
 font=Cantarell 11
 height=150
 background-color=#222222FF
-border-color=#222222FF
+border-color=#444444FF
 
 [!grouped]
 format=<b>%a</b>\n<b>%s</b>\n%b
