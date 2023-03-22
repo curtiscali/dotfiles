@@ -1,6 +1,12 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Cantarell, Roboto, Helvetica, Arial, sans-serif;
+    font-family: FontAwesome, 
+        Atkinson Hyperlegible, 
+        Cantarell, 
+        Roboto, 
+        Helvetica, 
+        Arial, 
+        sans-serif;
     font-size: 15px;
 }
 
@@ -107,7 +113,7 @@ button:hover {
 }
 
 #clock {
-    font-family: Cantarell;
+    font-family: Atkinson Hyperlegible;
     font-weight: bold;
     background-color: transparent;
 }
@@ -161,7 +167,7 @@ label:focus {
 }
 
 #network {
-    font-family: Cantarell;
+    font-family: Atkinson Hyperlegible;
     font-weight: bold;
 }
 
@@ -170,7 +176,7 @@ label:focus {
 }
 
 #pulseaudio {
-    font-family: Cantarell;
+    font-family: Atkinson Hyperlegible;
     font-weight: bold;
     color: white;
 }
@@ -208,6 +214,7 @@ label:focus {
 
 #tray {
     background-color: #2980b9;
+    border-bottom: 3px solid rgba(100, 114, 125, 0.75);
 }
 
 #tray > .passive {
@@ -276,8 +283,4 @@ label:focus {
 
 #scratchpad.empty {
 	background-color: transparent;
-}
-
-#tray {
-    border-bottom: 3px solid rgba(100, 114, 125, 0.75);
 }
