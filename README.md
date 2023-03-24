@@ -10,6 +10,9 @@ Just some dotfiles containing common configurations for linux and MacOS systems 
 * Waybar for Sway
 * Tofi
 * Swayimg
+* Wofi
+* [The Alacritty Terminal](https://alacritty.org/) if you want to install the alacritty terminal
+
 
 ### Vim
 Ensure that [Vim Plug](https://github.com/junegunn/vim-plug) is installed.
@@ -36,3 +39,5 @@ To do so, simply run `stow *` to install all config files or `stow <name of modu
 * waybar
 * tofi
 * swayimg
+* alacritty 
+* wofi
