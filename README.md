@@ -12,6 +12,7 @@ Just some dotfiles containing common configurations for linux and MacOS systems 
 * Swayimg
 * Wofi
 * [The Alacritty Terminal](https://alacritty.org/) if you want to install the alacritty terminal
+* [Mako Notifications](https://github.com/emersion/mako)
 
 
 ### Vim
@@ -41,3 +42,4 @@ To do so, simply run `stow *` to install all config files or `stow <name of modu
 * swayimg
 * alacritty 
 * wofi
+* mako
