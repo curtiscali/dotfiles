@@ -9,7 +9,7 @@ window {
 #input {
     margin: 5px;
     border: 3px solid #2B5879;
-    border-radius: 0;
+    border-radius: 5px;
     background-color: white;
 }
 
@@ -33,4 +33,5 @@ window {
 
 #entry:selected {
     background-color: #2B5879;
+    border-radius: 5px;
 }
