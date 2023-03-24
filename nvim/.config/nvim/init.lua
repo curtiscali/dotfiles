@@ -14,11 +14,12 @@ Plug('junegunn/fzf', {
         vim.fn['fzf#install']()
     end
 })
+
 Plug 'junegunn/fzf.vim'
 
 Plug.ends()
 
-vim.cmd.colorscheme('tokyonight-storm')
+vim.cmd.colorscheme('vscode')
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
@@ -38,7 +39,7 @@ vim.cmd([[
 require('nvim-tree').setup()
 require('lualine').setup({
     options = {
-        theme = 'tokyonight'
+        theme = 'vscode'
     }
 })
 
