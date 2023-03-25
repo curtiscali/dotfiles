@@ -29,3 +29,12 @@ function zsh_add_completion() {
 	completion_file="$(basename "${completion_file_path}")"
 	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
+
+function check-dnf-updates() {
+    dnf check-update
+    if [ $? -eq 100 ]; then
+        if read -q "Would you like to update? (y/n)"; then
+            sudo dnf update
+        fi
+    fi
+}
