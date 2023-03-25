@@ -19,11 +19,13 @@ Plug 'junegunn/fzf.vim'
 
 Plug.ends()
 
-vim.cmd.colorscheme('vscode')
+require('vscode').load()
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 vim.opt.updatetime = 100
+vim.opt.incsearch = false
+vim.wo.signcolumn = 'yes'
 vim.opt.cc = '80'
 vim.opt.ts = 4
 vim.opt.et = true
@@ -36,6 +38,7 @@ vim.cmd([[
     filetype plugin on
 ]])
 
+require('vgit').setup()
 require('nvim-tree').setup()
 require('lualine').setup({
     options = {
