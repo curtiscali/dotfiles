@@ -30,10 +30,11 @@ function zsh_add_completion() {
 	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
 
-function check-dnf-updates() {
+function check_dnf_updates() {
     dnf check-update
     if [ $? -eq 100 ]; then
-        if read -q "Would you like to update? (y/n)"; then
+        if read -q "choice?Press Y/y to update all DNF packages: "; then
+            print "" # This is important so DNF update starts on a new line
             sudo dnf update
         fi
     fi
