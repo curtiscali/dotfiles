@@ -164,8 +164,7 @@ label:focus {
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
-    color: black;
+   color: #f53c3c;
 }
 
 #wireplumber {
@@ -192,8 +191,7 @@ label:focus {
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
-    color: black;
+    color: #eb4d4b;
 }
 
 #tray {
