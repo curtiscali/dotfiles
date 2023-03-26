@@ -14,7 +14,6 @@
 
 window#waybar {
     background-color: rgba(0, 0, 0, 1);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.75);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -97,6 +96,10 @@ button:hover {
 #mpd {
     padding: 0 10px;
     color: #ffffff;
+    font-family: Atkinson Hyperlegible;
+    font-weight: bold;
+    background-color: transparent;
+
 }
 
 #window,
@@ -151,14 +154,6 @@ label:focus {
     background-color: #000000;
 }
 
-#cpu {
-    background-color: #2ecc71;
-    color: #000000;
-}
-
-#memory {
-    background-color: #9b59b6;
-}
 
 #disk {
     background-color: #964B00;
@@ -168,19 +163,9 @@ label:focus {
     background-color: #90b1b1;
 }
 
-#network {
-    font-family: Atkinson Hyperlegible;
-    font-weight: bold;
-}
-
 #network.disconnected {
     background-color: #f53c3c;
-}
-
-#pulseaudio {
-    font-family: Atkinson Hyperlegible;
-    font-weight: bold;
-    color: white;
+    color: black;
 }
 
 #wireplumber {
@@ -206,12 +191,9 @@ label:focus {
     background-color: #ffa000;
 }
 
-#temperature {
-    background-color: #f0932b;
-}
-
 #temperature.critical {
     background-color: #eb4d4b;
+    color: black;
 }
 
 #tray {
