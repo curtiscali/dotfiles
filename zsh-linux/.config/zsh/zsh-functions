@@ -34,8 +34,12 @@ function check_dnf_updates() {
     dnf check-update
     if [ $? -eq 100 ]; then # 100 is exit code dnf check-update returns when updates are available
         if read -q "choice?Press Y/y to update all DNF packages: "; then
-            print "" # This is important so DNF update starts on a new line
+            echo # This is important so DNF update starts on a new line
             sudo dnf update -y
+        else
+            echo "Updates aborted"
         fi
+    else
+        echo "No updates available in DNF"
     fi
 }
