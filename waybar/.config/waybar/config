@@ -139,7 +139,8 @@
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""],
+        "tooltip-format": "CPU Temperature: {temperatureC}°C"
     },
     "backlight": {
         // "device": "acpi_video1",
