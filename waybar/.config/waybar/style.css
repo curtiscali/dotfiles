@@ -96,7 +96,7 @@ button:hover {
 #mpd {
     padding: 0 10px;
     color: #ffffff;
-    font-family: Atkinson Hyperlegible;
+    font-family: Cantarell;
     font-weight: bold;
     background-color: transparent;
 
@@ -118,7 +118,7 @@ button:hover {
 }
 
 #clock {
-    font-family: Atkinson Hyperlegible;
+    font-family: Cantarell; 
     font-weight: bold;
     background-color: transparent;
 }
