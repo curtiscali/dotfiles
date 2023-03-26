@@ -32,10 +32,10 @@ function zsh_add_completion() {
 
 function check_dnf_updates() {
     dnf check-update
-    if [ $? -eq 100 ]; then
+    if [ $? -eq 100 ]; then # 100 is exit code dnf check-update returns when updates are available
         if read -q "choice?Press Y/y to update all DNF packages: "; then
             print "" # This is important so DNF update starts on a new line
-            sudo dnf update
+            sudo dnf update -y
         fi
     fi
 }
