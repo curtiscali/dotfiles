@@ -37,6 +37,7 @@ function check_dnf_updates() {
             echo # This is important so DNF update starts on a new line
             sudo dnf update -y
         else
+            echo
             echo "Updates aborted"
         fi
     else
