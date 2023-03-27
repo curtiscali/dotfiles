@@ -34,6 +34,7 @@ vim.opt.number = true
 vim.opt.encoding = 'UTF-8'
 
 vim.cmd([[
+    let mapleader = "\<Alt>"
     filetype plugin indent on
     filetype plugin on
 ]])

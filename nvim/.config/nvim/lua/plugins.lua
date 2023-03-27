@@ -25,13 +25,6 @@ return require('packer').startup(function(use)
     use 'Mofiqul/vscode.nvim'
 
     use {
-        "loctvl842/monokai-pro.nvim",
-        config = function()
-            require("monokai-pro").setup()
-        end
-    }
-
-    use {
 	    "windwp/nvim-autopairs",
         config = function()
             require("nvim-autopairs").setup {}
