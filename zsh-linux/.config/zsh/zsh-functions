@@ -30,10 +30,14 @@ function zsh_add_completion() {
 	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
 
+# This function encapsulates the formerly manual process of:
+# 1. Checking if updates are available from DNF
+# 2. Deciding if I want to update
+# 3. Running the updates
 function check_dnf_updates() {
     dnf check-update
     if [ $? -eq 100 ]; then # 100 is exit code dnf check-update returns when updates are available
-        if read -q "choice?Press Y/y to update all DNF packages: "; then
+        if read -q "choice?Would you like to proceed with the updates [Y/N] "; then
             echo # This is important so DNF update starts on a new line
             sudo dnf update -y
         else
