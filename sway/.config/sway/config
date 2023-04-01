@@ -15,6 +15,7 @@ smart_borders no_gaps
 
 # Set the font
 font Cantarell Bold 11
+for_window [app_id="firefox"] border none
 
 focus_follows_mouse no
 
