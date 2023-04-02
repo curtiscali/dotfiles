@@ -15,7 +15,11 @@ Plug('junegunn/fzf', {
     end
 })
 
-Plug 'junegunn/fzf.vim'
+Plug('nvim-treesitter/nvim-treesitter', {
+    run = function()
+        vim.cmd('TSUpdate')
+    end
+})
 
 Plug.ends()
 
@@ -44,6 +48,36 @@ require('nvim-tree').setup()
 require('lualine').setup({
     options = {
         theme = 'vscode'
+    }
+})
+
+require('nvim-treesitter.configs').setup({
+    -- A list of parser names, or "all" (the five listed parsers should always be installed)
+    ensure_installed = {
+        'python',
+        'ruby',
+        'javascript',
+        'css',
+        'c',
+        'rust',
+        'lua',
+        'vim',
+        'markdown',
+        'markdown_inline',
+        'json',
+        'json5',
+        'yaml'
+    },
+
+    -- Install parsers synchronously (only applied to `ensure_installed`)
+    sync_install = false,
+
+    -- Automatically install missing parsers when entering buffer
+    -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+    auto_install = true,
+
+    highlight = {
+        enable = true,
     }
 })
 
