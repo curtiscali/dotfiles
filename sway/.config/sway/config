@@ -12,11 +12,15 @@ smart_gaps on
 
 # Activate smart borders (only when there are effectively no gaps)
 smart_borders no_gaps
+for_window [app_id="firefox"] border none
+
+# Sets appearance for focused windows
+client.focused #CCCCCC #EEEEEE #000000 #2E9EF4 #EEEEEE
 
 # Set the font
 font Cantarell Bold 11
-for_window [app_id="firefox"] border none
 
+# Stop mousing over a window from automatically focusing it
 focus_follows_mouse no
 
 ### Variables
