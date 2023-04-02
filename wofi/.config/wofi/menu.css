@@ -5,36 +5,42 @@ window {
         Cantarell;
     font-weight: bold;
     margin: 5px;
-    border: 3px solid #2B5879;
-    background-color: white;
+    border-radius: 20px;
+    background-color: #353535;
 }
 
 #input {
     margin: 5px;
-    border: 3px solid #2B5879;
-    border-radius: 5px;
-    background-color: white;
+    border-radius: 100px;
+    color: white;
+    background-color: #494949;
+    caret-color: white;
 }
 
 #inner-box {
     margin: 5px;
+    border: none;
 }
 
 #outer-box {
     margin: 5px;
-    background-color: white;
+    background-color: #353535;
+    border-radius: 20px;
 }
 
 #scroll {
-    margin: 5px;
-    background-color: white;
+    background-color: #353535;
+    border: none;
 }
 
 #text {
-    margin: 5px;
+    margin: 5px 0;
+    color: white;
 }
 
 #entry:selected {
-    background-color: #2B5879;
-    border-radius: 5px;
+    background-color: #494949;
+    border-radius: 10px;
+    border: 0px;
+    outline: none;
 }
