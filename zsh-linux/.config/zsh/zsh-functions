@@ -53,6 +53,6 @@ function configure_gnome_ime() {
     sudo cat $ZDOTDIR/input-config-gnome > /etc/environment
 }
 
-function configure_gnome_ime() {
+function configure_sway_ime() {
     sudo cat $ZDOTDIR/input-config-sway > /etc/environment
 }
