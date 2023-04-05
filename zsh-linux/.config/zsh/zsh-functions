@@ -48,3 +48,11 @@ function check_dnf_updates() {
         echo "No updates available in DNF"
     fi
 }
+
+function configure_gnome_ime() {
+    sudo cat $ZDOTDIR/input-config-gnome > /etc/environment
+}
+
+function configure_gnome_ime() {
+    sudo cat $ZDOTDIR/input-config-sway > /etc/environment
+}
