@@ -13,8 +13,8 @@
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 1);
-    color: #ffffff;
+    background-color: #1b1c1f;
+    color: #6c6d6f;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -50,7 +50,8 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+    color: #5294e2;
+    box-shadow: inset 0 -3px #5294e2;
 }
 
 #workspaces button {
@@ -130,7 +131,6 @@ label:focus {
 
 #cpu {
     color: #FFCF91;
-    border-bottom: 3px solid #FFCF91;
 }
 
 #disk {
@@ -143,16 +143,10 @@ label:focus {
 
 #memory {
     color: #658BD6;
-    border-bottom: 3px solid #658BD6;
-}
-
-#network {
-    border-bottom: 3px solid white;
 }
 
 #network.disconnected {
     color: #f53c3c;
-    border-bottom: 3px solid #f53c3c;
 }
 
 #wireplumber {
@@ -180,12 +174,10 @@ label:focus {
 
 #temperature {
     color: #8BB159;
-    border-bottom: 3px solid #8BB159;
 }
 
 #temperature.critical {
     color: #eb4d4b;
-    border-bottom: 3px solid #eb4d4b;
 }
 
 #tray {
@@ -237,13 +229,8 @@ label:focus {
     min-width: 16px;
 }
 
-#pulseaudio {
-    border-bottom: 3px solid white;
-}
-
 #pulseaudio.muted {
     color: #eb4d4b;
-    border-bottom: 3px solid #eb4d4b;
 }
 
 #keyboard-state {

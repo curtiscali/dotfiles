@@ -85,6 +85,9 @@ require('nvim-treesitter.configs').setup({
     }
 })
 
+-- Clear latest search
+vim.keymap.set('n', '<F3>', '<cmd>noh<cr>')
+
 -- NvimTree Mappings
 vim.keymap.set('', '<F5>', '<cmd>NvimTreeToggle<cr>')
 vim.keymap.set('', '<F6>', '<cmd>NvimTreeFocus<cr>')
