@@ -15,7 +15,8 @@ smart_borders no_gaps
 for_window [app_id="firefox"] border none
 
 # Sets appearance for focused windows
-client.focused #CCCCCC #EEEEEE #000000 #2E9EF4 #EEEEEE
+client.focused #565656 #363636 #FFFFFF #239EF4 #363636
+client.unfocused #CCCCCC #EEEEEE #000000 #2E9EF4 #EEEEEE
 
 # Set the font
 font Cantarell Bold 11
