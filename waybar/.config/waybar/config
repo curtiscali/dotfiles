@@ -68,6 +68,7 @@
         "return-type": "json",
         "format": "{icon}",
         "format-icons": "",
+        "tooltip": false
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
