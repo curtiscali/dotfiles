@@ -95,7 +95,8 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
-#mpd {
+#mpd,
+#custom-colorpicker {
     padding: 0 5px;
     color: #BCBCBD;
     font-family: Cantarell;
@@ -157,6 +158,10 @@ label:focus {
 
 #wireplumber.muted {
     background-color: #f53c3c;
+}
+
+#custom-colorpicker {
+    padding: 0 10px;
 }
 
 #custom-media {

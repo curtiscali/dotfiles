@@ -12,6 +12,7 @@
     ],
     "modules-center": ["clock"],
     "modules-right": [
+        "custom/colorpicker",
         "temperature",
         "memory",
         "cpu",
@@ -19,7 +20,6 @@
         "pulseaudio", 
         "network", 
         "keyboard-state",
-        "custom/keyboard",
         "tray"
     ],
     // Modules configuration
@@ -61,6 +61,13 @@
         "format-icons": ["", ""],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
+    },
+    "custom/colorpicker": {
+        "on-click": "hyprpicker -a",
+        "exec-on-event": true,
+        "return-type": "json",
+        "format": "{icon}",
+        "format-icons": "",
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
