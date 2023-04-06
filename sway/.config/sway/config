@@ -12,7 +12,6 @@ smart_gaps on
 
 # Activate smart borders (only when there are effectively no gaps)
 smart_borders no_gaps
-for_window [app_id="firefox"] border none
 
 # Sets appearance for focused windows
 client.unfocused #565656 #363636 #FFFFFF #239EF4 #363636
