@@ -5,15 +5,15 @@ window {
         Cantarell;
     font-weight: bold;
     margin: 5px;
-    border-radius: 20px;
-    background-color: #353535;
+    border-radius: 10px;
+    background-color: #37393D;
 }
 
 #input {
     margin: 5px;
     border-radius: 100px;
     color: white;
-    background-color: #494949;
+    background-color: #4B4C50;
     caret-color: white;
 }
 
@@ -24,23 +24,23 @@ window {
 
 #outer-box {
     margin: 5px;
-    background-color: #353535;
+    background-color: #37393D;
     border-radius: 20px;
 }
 
 #scroll {
-    background-color: #353535;
+    background-color: #37393D;
     border: none;
 }
 
 #text {
-    margin: 5px 0;
+    margin: 5px 10px;
     color: white;
 }
 
 #entry:selected {
-    background-color: #494949;
-    border-radius: 10px;
+    background-color: #4B4C50;
+    border-radius: 5px;
     border: 0px;
     outline: none;
 }

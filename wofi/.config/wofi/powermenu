@@ -1,31 +1,25 @@
 #!/usr/bin/lua
 local options = {
     ["Lock"] = "$HOME/.config/sway/lockman.sh",
-    ["Shut down"] = "systemctl poweroff",
+    ["Power Off..."] = "systemctl poweroff",
     ["Restart..."] = "systemctl reboot",
-    ["Log out"] = "swaymsg exit",
+    ["Log Out..."] = "swaymsg exit",
     ["Suspend"] = "systemctl suspend",
     ["Hibernate"] = "systemctl hibernate",
 }
 
-local options_string = ""
-local length = 0
-for key, _ in pairs(options) do
-    options_string = options_string .. key .. "\n"
-    length = length + 1
-end
-options_string = options_string:sub(1, -2)
+local lineCountCommand = assert(io.popen("wc -l $HOME/.config/wofi/power-options | awk '{ print $1 }'"))
+local length = tonumber(lineCountCommand:read("*a"))
 
 local f = assert(
     io.popen(
-        "echo -e '"
-            .. options_string
-            .. "' | wofi --dmenu --insensitive --prompt 'Power menu' --width 300 --style $HOME/.config/wofi/menu.css --lines "
+        "cat $HOME/.config/wofi/power-options | wofi --dmenu --insensitive --prompt 'Power menu' --width 300 --style $HOME/.config/wofi/menu.css --lines "
         ------------------ to change the location of the dropdown, use --location 1 (top left) or --location 3 (top right) (see --location in wofi --help)
             .. (length + 2),
         "r"
     )
 )
+
 local s = assert(f:read("*a"))
 s = string.gsub(s, "^%s+", "")
 s = string.gsub(s, "%s+$", "")

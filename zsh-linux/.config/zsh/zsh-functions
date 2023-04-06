@@ -50,9 +50,27 @@ function check_dnf_updates() {
 }
 
 function configure_gnome_ime() {
-    sudo cat $ZDOTDIR/input-config-gnome > /etc/environment
+    if [ $(id -u) -ne 0 ]; then
+        echo "Please run this function as root"
+    else
+        sudo cat /home/ccali/.config/zsh/input-config-gnome > /etc/environment
+        if [ $? -eq 0 ]; then
+            echo "Successfully configured GNOME IME"
+        fi
+    fi
 }
 
 function configure_sway_ime() {
-    sudo cat $ZDOTDIR/input-config-sway > /etc/environment
+    if [ $(id -u) -ne 0 ]; then
+        echo "Please run this function as root"
+    else
+        sudo cat /home/ccali/.config/zsh/input-config-sway > /etc/environment
+        if [ $? -eq 0 ]; then
+            echo "Successfully configured Sway IME"
+        fi
+    fi
+}
+
+function zsudo() {
+    sudo zsh -c "$functions[$1]" "$@"
 }
