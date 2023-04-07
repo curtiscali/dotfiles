@@ -1,12 +1,23 @@
 #!/usr/bin/zsh
 
-current_ime=$(fcitx5-remote -n)
-ime_symbol=''
+function snore() {
+    local IFS
+    [[ -n "${_snore_fd:-}" ]] || exec {_snore_fd}<> <(:)
+    read -r ${1:+-t "$1"} -u $_snore_fd || :
+}
 
-if [[ $current_ime == "keyboard-us" ]]; then
-    ime_symbol='EN'
-else
-    ime_symbol='中'
-fi
+DELAY=0.2
 
-echo "{\"text\": \"${ime_symbol}\"}"
+while snore $DELAY; do
+    current_ime=$(fcitx5-remote -n)
+    ime_symbol=''
+
+    if [[ $current_ime == "keyboard-us" ]]; then
+        ime_symbol='EN'
+    else
+        ime_symbol='中'
+    fi
+
+    echo "{\"text\": \"${ime_symbol}\"}"
+done
+

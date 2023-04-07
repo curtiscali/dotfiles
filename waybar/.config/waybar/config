@@ -73,7 +73,6 @@
     "custom/ime": {
         "exec": "$HOME/.config/sway/scripts/query-fcitx5-ime",
         "return-type": "json",
-        "interval": 1,
         "signal": 88,
         "on-click": "fcitx5-remote -t; pkill -SIGRTMIN+88 waybar",
         "exec-on-event": true
