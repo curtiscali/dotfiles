@@ -21,7 +21,6 @@
         "pulseaudio", 
         "network", 
         "keyboard-state"
-//      "tray"
     ],
     // Modules configuration
     "sway/workspaces": {
