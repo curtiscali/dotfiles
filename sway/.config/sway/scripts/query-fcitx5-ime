@@ -1,14 +1,6 @@
 #!/usr/bin/zsh
 
-function snore() {
-    local IFS
-    [[ -n "${_snore_fd:-}" ]] || exec {_snore_fd}<> <(:)
-    read -r ${1:+-t "$1"} -u $_snore_fd || :
-}
-
-DELAY=0.2
-
-while snore $DELAY; do
+while [ 1 -eq 1 ]; do
     current_ime=$(fcitx5-remote -n)
     ime_symbol=''
 
@@ -19,5 +11,7 @@ while snore $DELAY; do
     fi
 
     echo "{\"text\": \"${ime_symbol}\"}"
+
+    sleep 0.2
 done
 
