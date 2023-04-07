@@ -19,9 +19,9 @@ smart_gaps on
 
 # Activate smart borders (only when there are effectively no gaps)
 smart_borders no_gaps
-
+##444444
 # Sets appearance for focused windows
-client.unfocused #565656 #363636 #FFFFFF #239EF4 #363636
+client.unfocused #666666 #444444 #FFFFFF #239EF4 #444444
 client.focused #CCCCCC #EEEEEE #000000 #2E9EF4 #EEEEEE
 
 # Set the font
