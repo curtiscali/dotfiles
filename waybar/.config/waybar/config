@@ -13,14 +13,15 @@
     "modules-center": ["clock"],
     "modules-right": [
         "custom/colorpicker",
+        "custom/ime",
         "temperature",
         "memory",
         "cpu",
         "custom/media", 
         "pulseaudio", 
         "network", 
-        "keyboard-state",
-        "tray"
+        "keyboard-state"
+//      "tray"
     ],
     // Modules configuration
     "sway/workspaces": {
@@ -69,6 +70,14 @@
         "format": "{icon}",
         "format-icons": "",
         "tooltip": false
+    },
+    "custom/ime": {
+        "exec": "$HOME/.config/sway/scripts/query-fcitx5-ime",
+        "return-type": "json",
+        "interval": 1,
+        "signal": 88,
+        "on-click": "fcitx5-remote -t; pkill -SIGRTMIN+88 waybar",
+        "exec-on-event": true
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",

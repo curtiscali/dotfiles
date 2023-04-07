@@ -96,7 +96,8 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #mpd,
-#custom-colorpicker {
+#custom-colorpicker,
+#custom-ime {
     padding: 0 5px;
     color: #BCBCBD;
     font-family: Cantarell;

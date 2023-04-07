@@ -1,0 +1,12 @@
+#!/usr/bin/zsh
+
+current_ime=$(fcitx5-remote -n)
+ime_symbol=''
+
+if [[ $current_ime == "keyboard-us" ]]; then
+    ime_symbol='EN'
+else
+    ime_symbol='中'
+fi
+
+echo "{\"text\": \"${ime_symbol}\"}"
