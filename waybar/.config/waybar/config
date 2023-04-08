@@ -144,10 +144,11 @@
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": true
+        "tooltip": true,
+        "interval": 1
     },
     "memory": {
-        "format": "{}% ",
+        "format": "{used}GiB ({}%) ",
         "tooltip-format": "{used}GiB/{total}GiB used"
     },
     "temperature": {
