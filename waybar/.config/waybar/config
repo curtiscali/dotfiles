@@ -71,11 +71,12 @@
         "tooltip": false
     },
     "custom/ime": {
-        "exec": "$HOME/.config/sway/scripts/query-fcitx5-ime",
+        "exec": "python3 ~/.config/sway/scripts/query-fcitx5-ime.py",
         "return-type": "json",
         "signal": 88,
         "on-click": "fcitx5-remote -t; pkill -SIGRTMIN+88 waybar",
-        "exec-on-event": true
+        "exec-on-event": true,
+        "escape": true
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
