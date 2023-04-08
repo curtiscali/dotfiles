@@ -17,7 +17,7 @@
         "custom/media", 
         "pulseaudio", 
         "network", 
-        "keyboard-state"
+        "custom/powermenu"
     ],
     // Modules configuration
     "sway/workspaces": {
@@ -74,6 +74,12 @@
         "on-click": "fcitx5-remote -t; pkill -SIGRTMIN+88 waybar",
         "exec-on-event": true,
         "escape": true
+    },
+    "custom/powermenu": {
+        "format": "",
+        "on-click": "~/.config/wofi/powermenu",
+        "exec-on-event": true,
+        "tooltip": false
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",

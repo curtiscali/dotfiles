@@ -3,7 +3,6 @@
     font-family: 'usr/share/fonts/fontawesome5-free-fonts/Font Awesome 5 Free-Solid-900.otf',
         'usr/share/fonts/fontawesome5-free-fonts/Font Awesome 5 Free-Regular-900.otf',
         '/usr/share/fonts/fontawesome5-brands-fonts/Font Awesome 5 Brands-Regular-400.otf',
-        Atkinson Hyperlegible, 
         Cantarell, 
         Roboto, 
         Helvetica, 
@@ -97,7 +96,8 @@ button:hover {
 #scratchpad,
 #mpd,
 #custom-colorpicker,
-#custom-ime {
+#custom-ime,
+#custom-powermenu {
     padding: 0 5px;
     color: #BCBCBD;
     font-family: Cantarell;
@@ -109,6 +109,15 @@ button:hover {
 #window,
 #workspaces {
     margin: 0 4px;
+}
+
+#custom-powermenu {
+    margin-right: 10px;
+}
+
+#custom-powermenu:hover {
+    background-color: #424446;
+    color: white;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
