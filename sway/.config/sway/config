@@ -22,7 +22,7 @@ smart_borders no_gaps
 
 # Sets appearance for focused windows
 client.unfocused #666666 #444444 #FFFFFF #239EF4 #444444
-client.focused #CCCCCC #EEEEEE #000000 #2E9EF4 #EEEEEE
+client.focused #CCCCCC #EEEEEE #303030 #2E9EF4 #EEEEEE
 
 # Set the font
 font Cantarell Bold 11

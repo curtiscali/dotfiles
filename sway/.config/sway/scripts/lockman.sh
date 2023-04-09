@@ -1,4 +1,6 @@
- the screen off and puts it to background
+#!/usr/bin/bash
+
+#Locks the screen off and puts it to background
  swayidle \
        timeout 10 'swaymsg "output * dpms off"' \
            resume 'swaymsg "output * dpms on"' &
