@@ -5,7 +5,8 @@
     "modules-left": [
         "sway/workspaces",
         "sway/mode",
-        "sway/scratchpad"
+        "sway/scratchpad",
+        "mpd"
     ],
     "modules-center": ["clock"],
     "modules-right": [
@@ -16,7 +17,9 @@
         "cpu",
         "custom/media", 
         "pulseaudio", 
-        "network", 
+        "network#wifi",
+        "network#ethernet",
+        "network#disconnected",
         "custom/powermenu"
     ],
     // Modules configuration
@@ -167,15 +170,32 @@
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "    {essid}",
-        "format-ethernet": "   Wired",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "    Disconnected",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
+    "network#disconnected": {
+            "tooltip-format": "No connection!",
+            "format-ethernet": "",
+            "format-wifi": "",
+            "format-linked": "    Disconnected",
+            "format-disconnected": "    Disconnected",
+            "on-click": "nm-connection-editor"
+        },
+        "network#ethernet": {
+            "interface": "enp*",
+            "format-ethernet": "   Wired",
+            "format-wifi": "",
+            "format-linked": "",
+            "format-disconnected": "",
+            "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+            "on-click": "nm-connection-editor"
+        },
+        "network#wifi": {
+            "interface": "wlo*",
+            "format-ethernet": "",
+            "format-wifi": "    {essid}",
+            "format-linked": "",
+            "format-disconnected": "",
+            "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+            "on-click": "nm-connection-editor"
+        },
     "pulseaudio": {
         "scroll-step": 1, // %, can be a float
         "format": "{icon}   {volume}% {format_source}",
