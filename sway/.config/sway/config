@@ -30,6 +30,10 @@ font Cantarell Bold 11
 # Stop mousing over a window from automatically focusing it
 focus_follows_mouse no
 
+# open these applications as floating by default
+for_window [app_id="pavucontrol"] floating enable
+for_window [app_id="nm-connection-editor"] floating enable
+
 ### Output configuration
 output DP-3 {
   mode 1920x1080@143.996Hz
