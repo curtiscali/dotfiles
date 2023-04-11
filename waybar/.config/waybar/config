@@ -75,6 +75,7 @@
         "return-type": "json",
         "signal": 88,
         "on-click": "fcitx5-remote -t; pkill -SIGRTMIN+88 waybar",
+        "on-click-right": "fcitx5-configtool",
         "exec-on-event": true,
         "escape": true
     },
