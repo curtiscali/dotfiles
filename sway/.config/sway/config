@@ -39,7 +39,8 @@ for_window [app_id="org.fcitx.fcitx5-config-qt"] floating enable
 output DP-3 {
   mode 1920x1080@143.996Hz
 }
-output * bg $HOME/Pictures/Wallpapers/orchis.jpg fill
+
+output * bg $HOME/.config/sway/wallpapers/orchis.jpg fill
 
 ### Idle configuration
 set $lock swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %B %d %Y" --timestr "%H:%M" 
