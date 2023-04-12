@@ -1,6 +1,7 @@
 export ZDOTDIR=$HOME/.config/zsh
 export SUDO_EDITOR=nvim
 export EDITOR=nvim
+export BAT_THEME="Visual Studio Dark+"
 
 # some useful options (man zshoptions)
 setopt autocd extendedglob nomatch menucomplete
