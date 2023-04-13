@@ -5,8 +5,7 @@
     "modules-left": [
         "sway/workspaces",
         "sway/mode",
-        "sway/scratchpad",
-        "mpd"
+        "sway/scratchpad"
     ],
     "modules-center": ["clock"],
     "modules-right": [
@@ -172,33 +171,32 @@
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "network#disconnected": {
-            "tooltip-format": "No connection!",
-            "format-ethernet": "",
-            "format-wifi": "",
-            "format-linked": "    Disconnected",
-            "format-disconnected": "    Disconnected",
-            "on-click": "nm-connection-editor"
-        },
-        "network#ethernet": {
-            "interface": "enp*",
-            "format-ethernet": "   Wired",
-            "format-wifi": "",
-            "format-linked": "",
-            "format-disconnected": "",
-            "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
-            "on-click": "nm-connection-editor"
-        },
-        "network#wifi": {
-            "interface": "wlo*",
-            "format-ethernet": "",
-            "format-wifi": "    {essid}",
-            "format-linked": "",
-            "format-disconnected": "",
-            "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
-            "on-click": "nm-connection-editor"
-        },
+       "tooltip-format": "No connection!",
+       "format-ethernet": "",
+       "format-wifi": "",
+       "format-linked": "    Disconnected",
+       "format-disconnected": "    Disconnected",
+       "on-click": "nm-connection-editor"
+   },
+   "network#ethernet": {
+       "interface": "enp*",
+       "format-ethernet": "   Wired",
+       "format-wifi": "",
+       "format-linked": "",
+       "format-disconnected": "",
+       "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+       "on-click": "nm-connection-editor"
+   },
+   "network#wifi": {
+       "interface": "wlo*",
+       "format-ethernet": "",
+       "format-wifi": "    {essid}",
+       "format-linked": "",
+       "format-disconnected": "",
+       "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+       "on-click": "nm-connection-editor"
+   },
     "pulseaudio": {
-        "scroll-step": 1, // %, can be a float
         "format": "{icon}   {volume}% {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
