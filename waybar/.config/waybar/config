@@ -12,8 +12,6 @@
         "custom/colorpicker",
         "custom/ime",
         "temperature",
-        "memory",
-        "cpu",
         "custom/media", 
         "pulseaudio", 
         "network#wifi",
