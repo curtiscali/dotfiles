@@ -5,14 +5,14 @@
     "modules-left": [
         "sway/workspaces",
         "sway/mode",
-        "sway/scratchpad"
+        "sway/scratchpad",
+        "custom/media"
     ],
     "modules-center": ["clock"],
     "modules-right": [
         "custom/colorpicker",
         "custom/ime",
         "temperature",
-        "custom/media", 
         "pulseaudio", 
         "network#wifi",
         "network#ethernet",
@@ -68,7 +68,7 @@
         "tooltip": false
     },
     "custom/ime": {
-        "exec": "python3 ~/.config/sway/scripts/query-fcitx5-ime.py",
+        "exec": "python3 ~/.config/waybar/scripts/query-fcitx5-ime.py",
         "return-type": "json",
         "signal": 88,
         "on-click": "fcitx5-remote -t; pkill -SIGRTMIN+88 waybar",
@@ -217,13 +217,16 @@
         "format": "{icon} {}",
         "return-type": "json",
         "max-length": 40,
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
         "format-icons": {
-            "spotify": "",
+            "spotify": "   ",
+            "firefox": "   ",
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        "exec": "python3 $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
     }
 }
 

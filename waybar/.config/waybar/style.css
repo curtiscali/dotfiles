@@ -97,7 +97,8 @@ button:hover {
 #mpd,
 #custom-colorpicker,
 #custom-ime,
-#custom-powermenu {
+#custom-powermenu,
+#custom-media {
     padding: 0 5px;
     color: #BCBCBD;
     font-family: Cantarell;
@@ -175,8 +176,8 @@ label:focus {
 }
 
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
+/*    background-color: #66cc99;
+    color: #2a5c45;*/
     min-width: 100px;
 }
 
