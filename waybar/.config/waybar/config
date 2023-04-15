@@ -160,7 +160,7 @@
         "interval": 1,
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""],
+        "format-icons": ["", "", ""],
         "tooltip-format": "CPU Temperature: {temperatureC}°C"
     },
     "backlight": {
