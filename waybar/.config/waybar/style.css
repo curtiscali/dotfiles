@@ -1,9 +1,8 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: 'usr/share/fonts/fontawesome5-free-fonts/Font Awesome 5 Free-Solid-900.otf',
-        'usr/share/fonts/fontawesome5-free-fonts/Font Awesome 5 Free-Regular-900.otf',
-        '/usr/share/fonts/fontawesome5-brands-fonts/Font Awesome 5 Brands-Regular-400.otf',
-        Cantarell, 
+    font-family: Cantarell,
+        "FontAwesome 6 Free", 
+        "FontAwesome 6 Brands",
         Roboto, 
         Helvetica, 
         Arial, 
@@ -101,7 +100,13 @@ button:hover {
 #custom-media {
     padding: 0 5px;
     color: #BCBCBD;
-    font-family: Cantarell;
+    font-family: Cantarell,
+        "FontAwesome 6 Free", 
+        "FontAwesome 6 Brands",
+        Roboto, 
+        Helvetica, 
+        Arial, 
+        sans-serif;
     font-weight: bold;
     background-color: transparent;
 

@@ -25,9 +25,9 @@
         "all-outputs": true,
         "format": "{icon}",
         "format-icons": {
-            "1": " ",
-            "2": " ",
-            "3": " ",
+            "1": "",
+            "2": "",
+            "3": "",
             "4": "4",
             "5": "5",
             "6": "6",
@@ -81,39 +81,6 @@
         "on-click": "python3 ~/.config/wofi/powermenu.py -p",
         "exec-on-event": true,
         "tooltip": false
-    },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
     },
     "tray": {
         "icon-size": 21,
@@ -172,34 +139,37 @@
        "tooltip-format": "No connection!",
        "format-ethernet": "",
        "format-wifi": "",
-       "format-linked": "    Disconnected",
-       "format-disconnected": "    Disconnected",
+       "format-linked": "{icon} Disconnected",
+       "format-disconnected": "{icon} Disconnected",
+       "format-icons": [""],
        "on-click": "nm-connection-editor"
    },
    "network#ethernet": {
        "interface": "enp*",
-       "format-ethernet": "   Wired",
+       "format-ethernet": "{icon} Wired",
        "format-wifi": "",
        "format-linked": "",
        "format-disconnected": "",
+       "format-icons": [""],
        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
        "on-click": "nm-connection-editor"
    },
    "network#wifi": {
        "interface": "wlo*",
        "format-ethernet": "",
-       "format-wifi": "    {essid}",
+       "format-wifi": "{icon} {essid}",
        "format-linked": "",
        "format-disconnected": "",
+       "format-icons": [""],
        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
        "on-click": "nm-connection-editor"
    },
     "pulseaudio": {
         "scroll-step": 1,
-        "format": "{icon}   {volume}% {format_source}",
+        "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source} Muted",
+        "format-muted": " {format_source} Muted",
         "format-source": "",
         "format-source-muted": "",
         "format-icons": {
@@ -221,8 +191,8 @@
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous",
         "format-icons": {
-            "spotify": "   ",
-            "firefox": "   ",
+            "spotify": "",
+            "firefox": "",
             "default": "🎜"
         },
         "escape": true,
