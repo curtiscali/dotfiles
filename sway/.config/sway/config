@@ -59,6 +59,9 @@ exec lxpolkit
 # Start FCITX to ensure we have an IME
 exec fcitx5 -d
 
+# Start OpenRazer daemon
+exec openrazer-daemon -r
+
 #Start startup programs
 workspace 2
 exec $term
