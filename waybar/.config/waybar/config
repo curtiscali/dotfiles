@@ -193,6 +193,7 @@
         "format-icons": {
             "spotify": "",
             "firefox": "",
+            "vlc": "",
             "default": "🎜"
         },
         "escape": true,
