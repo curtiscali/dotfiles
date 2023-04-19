@@ -50,6 +50,9 @@ exec swayidle -w \
   resume 'swaymsg "output * dpms on"' \
   before-sleep $lock
 
+# Start SSH Agent
+exec "eval $(ssh-agent -t 3600)"
+
 # Start notification service
 exec mako
 
