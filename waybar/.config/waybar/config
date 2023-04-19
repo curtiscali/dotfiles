@@ -148,7 +148,7 @@
        "format-linked": "{icon} {essid} (No Internet)",
        "format-disconnected": "",
        "format-icons": [""],
-       "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+       "tooltip-format": "{ifname}: {ipaddr}/{cidr} (Signal Strength: {signalStrength}%)",
        "on-click": "nm-connection-editor"
    },
     "pulseaudio": {
