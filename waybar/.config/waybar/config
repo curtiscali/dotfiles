@@ -12,7 +12,6 @@
     "modules-right": [
         "custom/colorpicker",
         "custom/ime",
-        "temperature",
         "pulseaudio", 
         "network#wifi",
         "network#ethernet",
