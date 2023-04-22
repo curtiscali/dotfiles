@@ -43,6 +43,7 @@ vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.cmd([[
     set nofoldenable
     let mapleader = "\<Alt>"
+    filetype on
     filetype plugin indent on
     filetype plugin on
 ]])
