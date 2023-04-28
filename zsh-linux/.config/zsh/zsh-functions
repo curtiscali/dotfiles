@@ -39,7 +39,7 @@ function check_dnf_updates() {
     if [ $? -eq 100 ]; then # 100 is exit code dnf check-update returns when updates are available
         if read -q "choice?Would you like to proceed with the updates [Y/N] "; then
             echo # This is important so DNF update starts on a new line
-            sudo dnf update -y
+            sudo dnf upgrade -y
         else
             echo
             echo "Updates aborted"
