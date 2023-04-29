@@ -1,3 +1,6 @@
+# Get the filename to store/lookup the environment from
+ssh_env_cache="$HOME/.ssh/environment-$SHORT_HOST"
+
 export ZDOTDIR=$HOME/.config/zsh
 export SUDO_EDITOR=nvim
 export EDITOR=nvim
@@ -64,3 +67,11 @@ bindkey '^e' edit-command-line
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/.local/bin:$HOME/bin:$HOME/gems/bin:$HOME/.cargo/bin:$PATH"
 
+# Start SSH Agent
+# Set a maximum lifetime for identities added to ssh-agent
+local lifetime=3600
+
+# start ssh-agent and setup environment
+ssh-agent -s ${lifetime:+-t} ${lifetime} | sed '/^echo/d' >! "$ssh_env_cache"
+chmod 600 "$ssh_env_cache"
+. "$ssh_env_cache" > /dev/null

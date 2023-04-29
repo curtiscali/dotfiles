@@ -86,6 +86,9 @@ require('nvim-treesitter.configs').setup({
     }
 })
 
+-- This line maps Shift-Tab to do what Ctrl-D does: delete one level of indentation
+vim.keymap.set('i', '<S-Tab>', '<C-d>')
+
 -- Clear latest search
 vim.keymap.set('n', '<F3>', '<cmd>noh<cr>')
 
