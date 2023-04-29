@@ -58,6 +58,10 @@ bindkey "^n" down-line-or-beginning-search # Down
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 bindkey '^[[3~' delete-char
+zle -N sudo_command_line
+bindkey -M emacs '\e\e' sudo_command_line
+bindkey -M vicmd '\e\e' sudo_command_line
+bindkey -M viins '\e\e' sudo_command_line
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
