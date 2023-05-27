@@ -75,6 +75,18 @@ function zsudo() {
     sudo zsh -c "$functions[$1]" "$@"
 }
 
+function delete_all_images() {
+    ARG=$1
+    if read -q "choice?This operation will permanently delete these files. Would you like to proceed? [Y/N] "; then
+        echo
+
+        FOLDER="${ARG:-.}"
+        rm $FOLDER/*.png
+        rm $FOLDER/*.jpg
+        rm $FOLDER/*.jpeg
+    fi
+}
+
 # Code based on https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/sudo/sudo.plugin.zsh
 function __sudo-replace-buffer() {
   local old=$1 new=$2 space=${2:+ }
