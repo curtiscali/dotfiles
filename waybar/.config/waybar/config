@@ -12,7 +12,10 @@
     "modules-right": [
         "custom/colorpicker",
         "custom/ime",
-        "pulseaudio", 
+        "pulseaudio",
+        "cpu",
+        "memory",
+        "temperature",
         "network#wifi",
         "network#ethernet",
         "network#disconnected",
