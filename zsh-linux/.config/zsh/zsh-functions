@@ -172,3 +172,19 @@ function sudo_command_line() {
     zle && zle redisplay # only run redisplay if zle is enabled
   }
 }
+
+function run_updates() {
+    PS3="Select which updates you'd like to run: "
+    items=("DNF" "Flatpak" "Both")
+
+    select item in "${items[@]}" Quit
+    do
+        case $REPLY in
+            1) check_dnf_updates; break;;
+            2) flatpak update; break;;
+            3) check_dnf_updates && echo && echo && flatpak update; break;;
+            $((${#items[@]} + 1))) break;;
+            *) echo "Invalid reply";
+        esac
+    done
+}
