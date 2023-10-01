@@ -36,8 +36,8 @@ for_window [app_id="nm-connection-editor"] floating enable
 for_window [app_id="org.fcitx.fcitx5-config-qt"] floating enable
 
 ### Output configuration
-output DP-1 {
-  mode 2560x1440@143.996Hz
+output DP-2 {
+  mode 2560x1440@143.973Hz
 }
 
 output * bg $HOME/.config/sway/wallpapers/fedora.png fill
