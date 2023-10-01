@@ -1,202 +1,222 @@
-{
-    "height": 40, // Waybar height (to be removed for auto height)
-    "spacing": 8, // Gaps between modules (in pixels)
-    // Choose the order of the modules
-    "modules-left": [
-        "sway/workspaces",
-        "sway/mode",
-        "sway/scratchpad",
-        "custom/media"
-    ],
-    "modules-center": ["clock"],
-    "modules-right": [
-        "custom/colorpicker",
-        "custom/ime",
-        "pulseaudio",
-        "cpu",
-        "memory",
-        "temperature",
-        "network#wifi",
-        "network#ethernet",
-        "network#disconnected",
-        "custom/powermenu"
-    ],
-    // Modules configuration
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "format": "{icon}",
-        "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "5",
-            "6": "6",
-            "7": "7",
-            "8": "8",
-            "9": "9",
-            "10": "10",
-            "urgent": "",
-         }
-    },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-    "custom/colorpicker": {
-        "on-click": "hyprpicker -a",
-        "exec-on-event": true,
-        "return-type": "json",
-        "format": "{icon}",
-        "format-icons": "",
-        "tooltip": false
-    },
-    "custom/ime": {
-        "exec": "python3 ~/.config/waybar/scripts/query-fcitx5-ime.py",
-        "return-type": "json",
-        "signal": 88,
-        "on-click": "fcitx5-remote -t; pkill -SIGRTMIN+88 waybar",
-        "on-click-right": "fcitx5-configtool",
-        "exec-on-event": true,
-        "escape": true
-    },
-    "custom/powermenu": {
-        "format": "",
-        "on-click": "python3 ~/.config/wofi/powermenu.py -p",
-        "exec-on-event": true,
-        "tooltip": false
-    },
-    "tray": {
-        "icon-size": 21,
-        "spacing": 10
-    },
-    "clock": {
-        "format": "{:%b %d %H:%M}",
-        "timezone": "America/Los_Angeles",
-        "tooltip": true,
-        "tooltip-format": "<tt>{calendar}</tt>",
-        "format-alt": "{:%B %d %Y %H:%M}",
-        "on-click-right": "mode",
-        "format-calendar": "<span color='#1B1C1F'><b>{}</b></span>",
-        "format-calendar-weekdays": "<span color='#1B1C1F'><b>{}</b></span>",
-        "calendar": {
-            "mode"          : "year",
-            "mode-mon-col"  : 3,
-            "on-scroll"     : 1,
-            "on-click-right": "mode",
-            "format": {
-                "months":     "<span color='#000000'><b>{}</b></span>",
-                "days":       "<span color='#000000'><b>{}</b></span>",
-                "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                "weekdays":   "<span color='#000000'><b>{}</b></span>",
-                "today":      "<span color='#da4242'><b><u>{}</u></b></span>"
+[
+    {
+        "name": "topbar",
+        "position": "top",
+        "layer": "top",
+        "height": 40, // Waybar height (to be removed for auto height)
+        "spacing": 8, // Gaps between modules (in pixels)
+        // Choose the order of the modules
+        "modules-left": [
+            "sway/mode",
+            "sway/scratchpad",
+            "custom/media"
+        ],
+        "modules-center": ["clock"],
+        "modules-right": [
+            "custom/colorpicker",
+            "custom/ime",
+            "pulseaudio",
+            "cpu",
+            "memory",
+            "temperature",
+            "network#wifi",
+            "network#ethernet",
+            "network#disconnected",
+            "custom/powermenu"
+        ],
+        "keyboard-state": {
+            "numlock": true,
+            "capslock": true,
+            "format": "{name} {icon}",
+            "format-icons": {
+                "locked": "",
+                "unlocked": ""
             }
         },
-        "on-scroll": {
-            "calendar": -1
+        "sway/mode": {
+            "format": "<span style=\"italic\">{}</span>"
+        },
+        "sway/scratchpad": {
+            "format": "{icon} {count}",
+            "show-empty": false,
+            "format-icons": ["", ""],
+            "tooltip": true,
+            "tooltip-format": "{app}: {title}"
+        },
+        "custom/colorpicker": {
+            "on-click": "hyprpicker -a",
+            "exec-on-event": true,
+            "return-type": "json",
+            "format": "{icon}",
+            "format-icons": "",
+            "tooltip": false
+        },
+        "custom/ime": {
+            "exec": "python3 ~/.config/waybar/scripts/query-fcitx5-ime.py",
+            "return-type": "json",
+            "signal": 88,
+            "on-click": "fcitx5-remote -t; pkill -SIGRTMIN+88 waybar",
+            "on-click-right": "fcitx5-configtool",
+            "exec-on-event": true,
+            "escape": true
+        },
+        "custom/powermenu": {
+            "format": "",
+            "on-click": "python3 ~/.config/wofi/powermenu.py -p",
+            "exec-on-event": true,
+            "tooltip": false
+        },
+        "tray": {
+            "icon-size": 21,
+            "spacing": 10
+        },
+        "clock": {
+            "format": "{:%b %d %H:%M}",
+            "timezone": "America/Los_Angeles",
+            "tooltip": true,
+            "tooltip-format": "<tt>{calendar}</tt>",
+            "format-alt": "{:%B %d %Y %H:%M}",
+            "on-click-right": "mode",
+            "format-calendar": "<span color='#1B1C1F'><b>{}</b></span>",
+            "format-calendar-weekdays": "<span color='#1B1C1F'><b>{}</b></span>",
+            "calendar": {
+                "mode"          : "year",
+                "mode-mon-col"  : 3,
+                "on-scroll"     : 1,
+                "on-click-right": "mode",
+                "format": {
+                    "months":     "<span color='#000000'><b>{}</b></span>",
+                    "days":       "<span color='#000000'><b>{}</b></span>",
+                    "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                    "weekdays":   "<span color='#000000'><b>{}</b></span>",
+                    "today":      "<span color='#da4242'><b><u>{}</u></b></span>"
+                }
+            },
+            "on-scroll": {
+                "calendar": -1
+            }
+        },
+        "cpu": {
+            "format": "{usage}% ",
+            "tooltip": true,
+            "interval": 1
+        },
+        "memory": {
+            "format": "{}% ",
+            "tooltip-format": "{used}GiB/{total}GiB used"
+        },
+        "temperature": {
+            "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+            "interval": 1,
+            "critical-threshold": 80,
+            "format": "{temperatureC}°C {icon}",
+            "format-icons": ["", "", ""],
+            "tooltip-format": "CPU Temperature: {temperatureC}°C"
+        },
+        "backlight": {
+            // "device": "acpi_video1",
+            "format": "{percent}% {icon}",
+            "format-icons": ["", "", "", "", "", "", "", "", ""]
+        },
+        "network#disconnected": {
+           "tooltip-format": "No connection!",
+           "format-ethernet": "",
+           "format-wifi": "",
+           "format-linked": "{icon} Disconnected",
+           "format-disconnected": "{icon} Disconnected",
+           "format-icons": [""],
+           "on-click": "nm-connection-editor"
+       },
+       "network#ethernet": {
+           "interface": "enp*",
+           "format-ethernet": "{icon} Wired",
+           "format-wifi": "",
+           "format-linked": "{icon} Wired (No Internet)",
+           "format-disconnected": "",
+           "format-icons": [""],
+           "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+           "on-click": "nm-connection-editor"
+       },
+       "network#wifi": {
+           "interface": "wlo*",
+           "format-ethernet": "",
+           "format-wifi": "{icon} {essid}",
+           "format-linked": "{icon} {essid} (No Internet)",
+           "format-disconnected": "",
+           "format-icons": [""],
+           "tooltip-format": "{ifname}: {ipaddr}/{cidr} (Signal Strength: {signalStrength}%)",
+           "on-click": "nm-connection-editor"
+       },
+        "pulseaudio": {
+            "scroll-step": 1,
+            "format": "{icon} {volume}% {format_source}",
+            "format-bluetooth": "{volume}% {icon} {format_source}",
+            "format-bluetooth-muted": " {icon} {format_source}",
+            "format-muted": " {format_source} Muted",
+            "format-source": "",
+            "format-source-muted": "",
+            "format-icons": {
+                "headphone": "",
+                "hands-free": "",
+                "headset": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                "default": ["", "", ""]
+            },
+            "on-click": "pavucontrol"
+        },
+        "custom/media": {
+            "format": "{icon} {}",
+            "return-type": "json",
+
+            "max-length": 40,
+            "on-click": "playerctl play-pause",
+            "on-scroll-up": "playerctl next",
+            "on-scroll-down": "playerctl previous",
+            "format-icons": {
+                "spotify": "",
+                "firefox": "",
+                "vlc": "",
+                "default": "🎜"
+            },
+            "escape": true,
+            "exec": "python3 $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
         }
     },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": true,
-        "interval": 1
-    },
-    "memory": {
-        "format": "{}% ",
-        "tooltip-format": "{used}GiB/{total}GiB used"
-    },
-    "temperature": {
-        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
-        "interval": 1,
-        "critical-threshold": 80,
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""],
-        "tooltip-format": "CPU Temperature: {temperatureC}°C"
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
-    "network#disconnected": {
-       "tooltip-format": "No connection!",
-       "format-ethernet": "",
-       "format-wifi": "",
-       "format-linked": "{icon} Disconnected",
-       "format-disconnected": "{icon} Disconnected",
-       "format-icons": [""],
-       "on-click": "nm-connection-editor"
-   },
-   "network#ethernet": {
-       "interface": "enp*",
-       "format-ethernet": "{icon} Wired",
-       "format-wifi": "",
-       "format-linked": "{icon} Wired (No Internet)",
-       "format-disconnected": "",
-       "format-icons": [""],
-       "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
-       "on-click": "nm-connection-editor"
-   },
-   "network#wifi": {
-       "interface": "wlo*",
-       "format-ethernet": "",
-       "format-wifi": "{icon} {essid}",
-       "format-linked": "{icon} {essid} (No Internet)",
-       "format-disconnected": "",
-       "format-icons": [""],
-       "tooltip-format": "{ifname}: {ipaddr}/{cidr} (Signal Strength: {signalStrength}%)",
-       "on-click": "nm-connection-editor"
-   },
-    "pulseaudio": {
-        "scroll-step": 1,
-        "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source} Muted",
-        "format-source": "",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+    {
+        "name": "bottombar",
+        "layer": "top",
+        "position": "bottom",
+        "height": 40,
+        "modules-left": ["wlr/taskbar"],
+        "modules-center": [],
+        "modules-right": ["sway/workspaces"],
+        // Modules configuration
+        "wlr/taskbar": {
+            "format": "{icon} {name}",
+            "icon-size": 13,
+            "tooltip": false,
+            "on-click": "minimize-raise",
+            "on-click-right": "close"
         },
-        "on-click": "pavucontrol"
-    },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous",
-        "format-icons": {
-            "spotify": "",
-            "firefox": "",
-            "vlc": "",
-            "default": "🎜"
+        "sway/workspaces": {
+            "disable-scroll": true,
+            "all-outputs": true,
+            "format": "{icon}",
+            "format-icons": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10",
+                "urgent": "",
+             }
         },
-        "escape": true,
-        "exec": "python3 $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
     }
-}
-
+]

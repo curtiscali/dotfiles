@@ -259,3 +259,18 @@ label:focus {
 #scratchpad.empty {
 	background-color: transparent;
 }
+
+#taskbar button {
+    color: #BCBCBD;
+}
+
+#taskbar button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 -3px #5294e2;
+}
+
+#taskbar button.active {
+    color: white;
+    background-color: #424446;
+    box-shadow: inset 0 -3px #5294e2;
+}
