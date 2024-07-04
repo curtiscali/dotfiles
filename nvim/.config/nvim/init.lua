@@ -27,6 +27,14 @@ vim.cmd([[
     filetype plugin on
 ]])
 
+require('vgit').setup()
+require('nvim-tree').setup()
+require('lualine').setup({
+    options = {
+        theme = 'vscode'
+    }
+})
+
 require('nvim-treesitter.configs').setup({
     -- A list of parser names, or "all" (the five listed parsers should always be installed)
     ensure_installed = {
