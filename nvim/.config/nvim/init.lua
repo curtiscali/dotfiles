@@ -2,28 +2,7 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require 'plugins'
-
-local Plug = require 'usermod.vim-plug'
-Plug.begin('~/.config/nvim/plugged')
-
-Plug 'ryanoasis/vim-devicons'
-
-Plug('junegunn/fzf', {
-    run = function()
-        vim.fn['fzf#install']()
-    end
-})
-
-Plug('nvim-treesitter/nvim-treesitter', {
-    run = function()
-        vim.cmd('TSUpdate')
-    end
-})
-
-Plug.ends()
-
-require('vscode').load()
+require("config.lazy")
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
@@ -47,14 +26,6 @@ vim.cmd([[
     filetype plugin indent on
     filetype plugin on
 ]])
-
-require('vgit').setup()
-require('nvim-tree').setup()
-require('lualine').setup({
-    options = {
-        theme = 'vscode'
-    }
-})
 
 require('nvim-treesitter.configs').setup({
     -- A list of parser names, or "all" (the five listed parsers should always be installed)

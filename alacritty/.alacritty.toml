@@ -1,0 +1,118 @@
+[shell]
+program = "/bin/zsh"
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[colors.bright]
+black = "#545454"
+blue = "#569cd6"
+cyan = "#56b6c2"
+green = "#608b4e"
+magenta = "#c678dd"
+red = "#f44747"
+white = "#d4d4d4"
+yellow = "#dcdcaa"
+
+[colors.cursor]
+cursor = "#d4d4d4"
+text = "#d4d4d4"
+
+[colors.normal]
+black = "#1e1e1e"
+blue = "#569cd6"
+cyan = "#56b6c2"
+green = "#608b4e"
+magenta = "#c678dd"
+red = "#f44747"
+white = "#d4d4d4"
+yellow = "#dcdcaa"
+
+[colors.primary]
+background = "#1e1e1e"
+foreground = "#d4d4d4"
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "Mononoki Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "Mononoki Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "Mononoki Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "Mononoki Nerd Font"
+style = "Regular"
+
+[schemes.codedark.bright]
+black = "#545454"
+blue = "#569cd6"
+cyan = "#56b6c2"
+green = "#608b4e"
+magenta = "#c678dd"
+red = "#f44747"
+white = "#d4d4d4"
+yellow = "#dcdcaa"
+
+[schemes.codedark.cursor]
+cursor = "#d4d4d4"
+text = "#d4d4d4"
+
+[schemes.codedark.normal]
+black = "#1e1e1e"
+blue = "#569cd6"
+cyan = "#56b6c2"
+green = "#608b4e"
+magenta = "#c678dd"
+red = "#f44747"
+white = "#d4d4d4"
+yellow = "#dcdcaa"
+
+[schemes.codedark.primary]
+background = "#1e1e1e"
+foreground = "#d4d4d4"
+
+[schemes.codelight.bright]
+black = "#1e1e1e"
+blue = "#007acc"
+cyan = "#56b6c2"
+green = "#009000"
+magenta = "#af00db"
+red = "#c72e0f"
+white = "#d4d4d4"
+yellow = "#795e25"
+
+[schemes.codelight.cursor]
+cursor = "#d4d4d4"
+text = "#d4d4d4"
+
+[schemes.codelight.normal]
+black = "#1e1e1e"
+blue = "#007acc"
+cyan = "#56b6c2"
+green = "#009000"
+magenta = "#af00db"
+red = "#c72e0f"
+white = "#d4d4d4"
+yellow = "#795e25"
+
+[schemes.codelight.primary]
+background = "#ffffff"
+foreground = "#1e1e1e"
+
+[window]
+decorations = "full"
+dynamic_title = true
+resize_increments = true
+startup_mode = "Windowed"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
