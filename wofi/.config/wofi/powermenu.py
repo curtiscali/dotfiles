@@ -8,7 +8,7 @@ WOFI_TOP_RIGHT = 3
 
 def main(args):
     option_cmds = {    
-        'Lock': '/home/ccali/.config/sway/scripts/lockman.sh',
+        'Lock': '/home/cucali/.config/sway/scripts/lockman.sh',
         'Power Off...': 'systemctl poweroff',
         'Restart...': 'systemctl reboot',
         'Log Out...': 'swaymsg exit',
@@ -26,7 +26,7 @@ def main(args):
         '--insensitive', 
         '--prompt', 'Power Menu',
         '--width', '300',
-        '--style', '/home/ccali/.config/wofi/menu.css',
+        '--style', '/home/cucali/.config/wofi/menu.css',
         '--lines', ('%s' % (len(options) + 2)),
         '--location', ('%s' % (location))
     ], stdin=echo.stdout, stdout=subprocess.PIPE, env=os.environ.copy())

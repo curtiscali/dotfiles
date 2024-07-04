@@ -1,7 +1,7 @@
 window {
-    font-family: 'usr/share/fonts/fontawesome5-free-fonts/Font Awesome 5 Free-Solid-900.otf',
-        'usr/share/fonts/fontawesome5-free-fonts/Font Awesome 5 Free-Regular-900.otf',
-        '/usr/share/fonts/fontawesome5-brands-fonts/Font Awesome 5 Brands-Regular-400.otf',
+    font-family: 'usr/share/fonts/fontawesome5-free-fonts/Font Awesome 6 Free-Solid-900.otf',
+        'usr/share/fonts/fontawesome5-free-fonts/Font Awesome 6 Free-Regular-900.otf',
+        '/usr/share/fonts/fontawesome5-brands-fonts/Font Awesome 6 Brands-Regular-400.otf',
         Cantarell;
     font-weight: bold;
     margin: 5px;
