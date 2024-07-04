@@ -40,7 +40,7 @@ output DP-2 {
   mode 2560x1440@143.973Hz
 }
 
-output * bg $HOME/.config/sway/wallpapers/macOS-Ventura-new-wallpaper-1.webp fill
+output * bg $HOME/.config/sway/wallpapers/voyager_wallpaper.png fill
 
 ### Idle configuration
 set $lock swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %B %d %Y" --timestr "%H:%M" 
