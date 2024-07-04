@@ -7,6 +7,7 @@
         "spacing": 8, // Gaps between modules (in pixels)
         // Choose the order of the modules
         "modules-left": [
+            "sway/workspaces",
             "sway/mode",
             "sway/scratchpad",
             "custom/media"
@@ -96,6 +97,24 @@
                 "calendar": -1
             }
         },
+        "sway/workspaces": {
+            "disable-scroll": true,
+            "all-outputs": true,
+            "format": "{icon}",
+            "format-icons": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10",
+                "urgent": "",
+             }
+        },
         "cpu": {
             "format": "{usage}% ",
             "tooltip": true,
@@ -181,43 +200,7 @@
                 "default": "🎜"
             },
             "escape": true,
-            "exec": "python3 $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
+            "exec": "python $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
         }
-    },
-    {
-        "name": "bottombar",
-        "layer": "top",
-        "position": "bottom",
-        "height": 40,
-        "modules-left": ["wlr/taskbar"],
-        "modules-center": [],
-        "modules-right": ["sway/workspaces"],
-        // Modules configuration
-        "wlr/taskbar": {
-            "format": "{icon} {name}",
-            "icon-size": 13,
-            "tooltip": false,
-            "sort-by-app-id": true,
-            "on-click": "minimize-raise",
-            "on-click-right": "close"
-        },
-        "sway/workspaces": {
-            "disable-scroll": true,
-            "all-outputs": true,
-            "format": "{icon}",
-            "format-icons": {
-                "1": "",
-                "2": "",
-                "3": "",
-                "4": "",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10",
-                "urgent": "",
-             }
-        },
     }
 ]
