@@ -53,10 +53,11 @@
             "tooltip": false
         },
         "custom/ime": {
-            "exec": "python ~/.config/waybar/scripts/query-fcitx5-ime.py",
+            "exec": "python /home/cucali/.config/waybar/scripts/query-fcitx5-ime.py",
             "return-type": "json",
-            "signal": 88,
-            "on-click": "fcitx5-remote -t; pkill -SIGRTMIN+88 waybar",
+            "format": "{}",
+            //"signal": 88,
+            //"on-click": "fcitx5-remote -t; pkill -SIGRTMIN+88 waybar",
             "on-click-right": "fcitx5-configtool",
             "exec-on-event": true,
             "escape": true
