@@ -121,7 +121,9 @@ button:hover {
     margin-right: 5px;
 }
 
-#custom-powermenu:hover {
+#custom-powermenu:hover,
+#custom-colorpicker:hover,
+#custom-ime:hover {
     background-color: #424446;
     color: white;
 }
