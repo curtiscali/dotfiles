@@ -17,33 +17,60 @@ require("lazy").setup({
   spec = {
     -- import your plugins
     {
-	'Mofiqul/vscode.nvim',
-	lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    	'Mofiqul/vscode.nvim',
+	    lazy = false, -- make sure we load this during startup if it is your main colorscheme
     	priority = 1000, -- make sure to load this before all the other start plugins
     	config = function()
-	    -- load the colorscheme here
-	    vim.cmd([[colorscheme vscode]])
-	end,
+    	    -- load the colorscheme here
+	        vim.cmd([[colorscheme vscode]])
+    	end,
     },
     {
-	'windwp/nvim-autopairs',
-	config = function()
-	    require("nvim-autopairs").setup {}
-	end
+	    'windwp/nvim-autopairs',
+        opts = {}
     },
     {
         'nvim-tree/nvim-web-devicons'
     },
     {
         'nvim-lualine/lualine.nvim',
-	dependencies = { 'nvim-tree/nvim-web-devicons' },
-        opts = { theme = 'vscode' }
+    	dependencies = { 'nvim-tree/nvim-web-devicons' },
+        opts = { theme = 'vscode' },
     },
     {
         'nvim-treesitter/nvim-treesitter',
-	config = function() 
-	    vim.cmd([[TSUpdate]])
-	end
+        build = ':TSUpdate',
+        config = function()
+		    require('nvim-treesitter.configs').setup({
+                -- A list of parser names, or "all" 
+                ensure_installed = {
+                    'python',
+                    'ruby',
+                    'javascript',
+                    'css',
+                    'c',
+                    'rust',
+                    'lua',
+                    'vim',
+                    'markdown',
+                    'markdown_inline',
+                    'json',
+                    'json5',
+                    'yaml'
+                },
+
+                -- Install parsers synchronously (only applied to `ensure_installed`)
+                sync_install = false,
+
+                -- Automatically install missing parsers when entering buffer
+                -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+                auto_install = true,
+
+                highlight = {
+                    enable = true,
+                }
+		    })
+    	end
     },
     {
         'ryanoasis/vim-devicons'
@@ -53,11 +80,19 @@ require("lazy").setup({
     },
     {
         'nvim-tree/nvim-tree.lua',
-	dependencies = { 'nvim-tree/nvim-web-devicons' }
+	    dependencies = { 'nvim-tree/nvim-web-devicons' },
+        opts = {}
     },
     {
         'tanvirtin/vgit.nvim',
-	dependencies = { 'nvim-lua/plenary.nvim' }
+    	dependencies = { 'nvim-lua/plenary.nvim' },
+        opts = {}
+    },
+    {
+        'junegunn/fzf',
+        config = function()
+            vim.cmd([[call fzf#install()]])
+        end
     }
   },
   -- Configure any other settings here. See the documentation for more details.

@@ -27,44 +27,6 @@ vim.cmd([[
     filetype plugin on
 ]])
 
-require('vgit').setup()
-require('nvim-tree').setup()
-require('lualine').setup({
-    options = {
-        theme = 'vscode'
-    }
-})
-
-require('nvim-treesitter.configs').setup({
-    -- A list of parser names, or "all" (the five listed parsers should always be installed)
-    ensure_installed = {
-        'python',
-        'ruby',
-        'javascript',
-        'css',
-        'c',
-        'rust',
-        'lua',
-        'vim',
-        'markdown',
-        'markdown_inline',
-        'json',
-        'json5',
-        'yaml'
-    },
-
-    -- Install parsers synchronously (only applied to `ensure_installed`)
-    sync_install = false,
-
-    -- Automatically install missing parsers when entering buffer
-    -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-    auto_install = true,
-
-    highlight = {
-        enable = true,
-    }
-})
-
 -- This line maps Shift-Tab to do what Ctrl-D does: delete one level of indentation
 vim.keymap.set('i', '<S-Tab>', '<C-d>')
 
@@ -90,3 +52,7 @@ vim.keymap.set('', '<C-n>', '<cmd>tabnew<cr>')
 vim.keymap.set('', '<C-w>', '<cmd>tabclose<cr>')
 vim.keymap.set('', '<C-S-Left>', '<cmd>-tabmove<cr>')
 vim.keymap.set('', '<C-S-Right>', '<cmd>+tabmove<cr>')
+
+-- Visual Mode Bindings
+vim.keymap.set('v', '<Tab>', '>')
+vim.keymap.set('v', '<S-Tab>', '<')
