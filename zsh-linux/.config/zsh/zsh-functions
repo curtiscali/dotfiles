@@ -71,6 +71,14 @@ function configure_sway_ime() {
     fi
 }
 
+function configure_window_settings() {
+    if [ $1 -eq "sway" ]; then
+        gsettings set org.gnome.desktop.wm.preferences button-layout ""
+    else
+        gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+    fi
+}
+
 function zsudo() {
     sudo zsh -c "$functions[$1]" "$@"
 }
