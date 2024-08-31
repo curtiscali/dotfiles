@@ -48,10 +48,24 @@ vim.keymap.set('n', '<F12>', '<cmd>FloatermToggle<cr>', { silent = true })
 vim.keymap.set('t', '<F12>', '<cmd>FloatermToggle<cr>', { silent = true })
 
 -- Tab Bindings
-vim.keymap.set('', '<C-n>', '<cmd>tabnew<cr>')
-vim.keymap.set('', '<C-w>', '<cmd>tabclose<cr>')
+vim.keymap.set('', '<Leader>tn', '<cmd>tabnew<cr>')
+vim.keymap.set('', '<Leader>tc', '<cmd>tabclose<cr>')
 vim.keymap.set('', '<C-S-Left>', '<cmd>-tabmove<cr>')
 vim.keymap.set('', '<C-S-Right>', '<cmd>+tabmove<cr>')
+vim.keymap.set('', '<Leader>to', '<cmd>tabonly<cr>')
+vim.keymap.set('', '<C-Right>', '<cmd>+tabnext<cr>')
+vim.keymap.set('', '<C-Left>', '<cmd>-tabnext<cr>')
+
+-- Open the 1-9th tabs easily
+vim.keymap.set('', '<C-1>', '<cmd>1tabnext<cr>')
+vim.keymap.set('', '<C-2>', '<cmd>2tabnext<cr>')
+vim.keymap.set('', '<C-3>', '<cmd>3tabnext<cr>')
+vim.keymap.set('', '<C-4>', '<cmd>4tabnext<cr>')
+vim.keymap.set('', '<C-5>', '<cmd>5tabnext<cr>')
+vim.keymap.set('', '<C-6>', '<cmd>6tabnext<cr>')
+vim.keymap.set('', '<C-7>', '<cmd>7tabnext<cr>')
+vim.keymap.set('', '<C-8>', '<cmd>8tabnext<cr>')
+vim.keymap.set('', '<C-9>', '<cmd>9tabnext<cr>')
 
 -- Visual Mode Bindings
 vim.keymap.set('v', '<Tab>', '>')
