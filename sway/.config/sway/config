@@ -45,8 +45,9 @@ output * bg $HOME/.config/sway/wallpapers/voyager_wallpaper.png fill
 ### Idle configuration
 set $lock swaylock -c 1B1C1F
 exec swayidle -w \
-  timeout 600 $lock \
   timeout 570 'swaymsg "output * dpms off"' \
+  timeout 600 $lock \
+  timeout 3600 'systemctl suspend' \
   resume 'swaymsg "output * dpms on"' \
   before-sleep $lock
 
