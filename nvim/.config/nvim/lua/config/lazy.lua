@@ -18,8 +18,8 @@ require("lazy").setup({
     -- import your plugins
     {
     	'Mofiqul/vscode.nvim',
-	    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    	priority = 1000, -- make sure to load this before all the other start plugins
+	lazy = false, -- make sure we load this during startup if it is your main colorscheme
+	priority = 1000, -- make sure to load this before all the other start plugins
     	config = function()
     	    -- load the colorscheme here
 	        vim.cmd([[colorscheme vscode]])
@@ -93,6 +93,10 @@ require("lazy").setup({
         config = function()
             vim.cmd([[call fzf#install()]])
         end
+    },
+    {
+    	'nvim-telescope/telescope.nvim', tag = '0.1.8',
+      	dependencies = { 'nvim-lua/plenary.nvim' }
     }
   },
   -- Configure any other settings here. See the documentation for more details.

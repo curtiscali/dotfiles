@@ -21,7 +21,7 @@ vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 
 vim.cmd([[
     set nofoldenable
-    let mapleader = "\<Alt>"
+    let mapleader = "\<Space>"
     filetype on
     filetype plugin indent on
     filetype plugin on
@@ -56,3 +56,9 @@ vim.keymap.set('', '<C-S-Right>', '<cmd>+tabmove<cr>')
 -- Visual Mode Bindings
 vim.keymap.set('v', '<Tab>', '>')
 vim.keymap.set('v', '<S-Tab>', '<')
+
+-- Telescope bindings
+vim.keymap.set('n', '<Leader>ff', '<cmd>Telescope find_files<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>fg', '<cmd>Telescope live_grep<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope buffers<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>fh', '<cmd>Telescope help_tags<cr>', { silent = true })
