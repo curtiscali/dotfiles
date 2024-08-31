@@ -34,6 +34,7 @@ focus_follows_mouse no
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="nm-connection-editor"] floating enable
 for_window [app_id="org.fcitx.fcitx5-config-qt"] floating enable
+for_window [app_id="pcmanfm"] floating enable
 
 # Output configuration
 output DP-2 {
