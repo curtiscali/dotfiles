@@ -14,6 +14,8 @@ Just some dotfiles containing common configurations for linux and MacOS systems 
 * Wofi
 * [The Alacritty Terminal](https://alacritty.org/) if you want to install the alacritty terminal
 * [Mako Notifications](https://github.com/emersion/mako)
+* Vim
+* Neovim
 
 
 ### Vim
@@ -22,6 +24,11 @@ Ensure that [Vim Plug](https://github.com/junegunn/vim-plug) is installed.
 
 ### Neovim
 [Lazy.nvim](https://github.com/folke/lazy.nvim) should automatically handle loading all neovim plugins
+#### [COC.NVIM](https://github.com/neoclide/coc.nvim)
+Run `:CocInstall` for each of the following modules:
+* [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer)
+* [coc-sumneko-lua](https://github.com/xiyaowong/coc-sumneko-lua)
+* [coc-markdown-preview-enhanced](https://github.com/weirongxu/coc-markdown-preview-enhanced)
 
 ## To setup:
 Thanks to the wonderful discovery of [GNU Stow](https://www.gnu.org/software/stow/manual/stow.html), this project is set up to use GNU Stow to install various dotfiles where needed.
