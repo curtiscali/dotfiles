@@ -29,6 +29,7 @@ Run `:CocInstall` for each of the following modules:
 * [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer)
 * [coc-sumneko-lua](https://github.com/xiyaowong/coc-sumneko-lua)
 * [coc-markdown-preview-enhanced](https://github.com/weirongxu/coc-markdown-preview-enhanced)
+* [coc-pyright](https://github.com/fannheyward/coc-pyright)
 
 ## To setup:
 Thanks to the wonderful discovery of [GNU Stow](https://www.gnu.org/software/stow/manual/stow.html), this project is set up to use GNU Stow to install various dotfiles where needed.
