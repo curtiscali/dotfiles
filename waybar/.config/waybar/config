@@ -22,7 +22,6 @@
             "temperature",
             "network#wifi",
             "network#ethernet",
-            "network#disconnected",
             "custom/powermenu"
         ],
         "keyboard-state": {
@@ -137,22 +136,17 @@
             "format": "{percent}% {icon}",
             "format-icons": ["", "", "", "", "", "", "", "", ""]
         },
-        "network#disconnected": {
-           "tooltip-format": "No connection!",
-           "format-ethernet": "",
-           "format-wifi": "",
-           "format-linked": "{icon} Disconnected",
-           "format-disconnected": "{icon} Disconnected",
-           "format-icons": [""],
-           "on-click": "nm-connection-editor"
-       },
        "network#ethernet": {
            "interface": "enp*",
            "format-ethernet": "{icon} Wired",
            "format-wifi": "",
            "format-linked": "{icon} Wired (No Internet)",
-           "format-disconnected": "",
-           "format-icons": [""],
+           "format-disconnected": "{icon} Disconnected",
+           "format-icons": {
+               "disconnected": "",
+               "ethernet": "",
+               "linked": ""
+           }, //["", ""],
            "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
            "on-click": "nm-connection-editor"
        },
@@ -161,8 +155,12 @@
            "format-ethernet": "",
            "format-wifi": "{icon} {essid}",
            "format-linked": "{icon} {essid} (No Internet)",
-           "format-disconnected": "",
-           "format-icons": [""],
+           "format-icons": {
+               "wifi": "",
+               "linked": "",
+               "disconnected": ""
+           },//["", ""],
+           "format-disconnected": "{icon} Disconnected",
            "tooltip-format": "{ifname}: {ipaddr}/{cidr} (Signal Strength: {signalStrength}%)",
            "on-click": "nm-connection-editor"
        },
