@@ -48,8 +48,10 @@ set $lock swaylock -f -k -l --font "Cantarell Bold" --font-size 16 -i /home/cuca
 exec swayidle -w \\
   timeout 600 'swaymsg "output * power off"' \\
   timeout 10 $lock \\
+  timeout 3600 'systemctl suspend' \\
   resume 'swaymsg "output * power on"' \\
-  before-sleep $lock
+  before-sleep $lock \\
+  after-resume 'swaymsg reload'
 
 # Start SSH Agent
 exec "eval $(ssh-agent -t 3600)"
