@@ -196,3 +196,11 @@ function run_updates() {
         esac
     done
 }
+
+function remove_window_buttons() {
+    gsettings set org.gnome.desktop.wm.preferences button-layout :
+}
+
+function reset_window_buttons() {
+    gsettings reset org.gnome.desktop.wm.preferences button-layout
+}
