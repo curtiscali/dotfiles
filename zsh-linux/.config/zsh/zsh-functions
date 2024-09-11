@@ -72,7 +72,7 @@ function configure_sway_ime() {
 }
 
 function configure_window_settings() {
-    if [ $1 -eq "sway" ]; then
+    if [[ $1 == "sway" ]]; then
         gsettings set org.gnome.desktop.wm.preferences button-layout ""
     else
         gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
@@ -197,10 +197,3 @@ function run_updates() {
     done
 }
 
-function remove_window_buttons() {
-    gsettings set org.gnome.desktop.wm.preferences button-layout :
-}
-
-function reset_window_buttons() {
-    gsettings reset org.gnome.desktop.wm.preferences button-layout
-}

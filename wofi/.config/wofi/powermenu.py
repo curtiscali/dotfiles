@@ -7,11 +7,12 @@ WOFI_CENTER = 0
 WOFI_TOP_RIGHT = 3
 
 def main(args):
+    logout_command = 'hyprctl dispatch exit' if args.hyprland else 'swaymsg exit'
     option_cmds = {    
         'Lock': '/home/cucali/.config/sway/scripts/lockman.sh',
         'Power Off...': 'systemctl poweroff',
         'Restart...': 'systemctl reboot',
-        'Log Out...': 'swaymsg exit',
+        'Log Out...': logout_command,
         'Suspend': 'systemctl suspend',
         'Hibernate': 'systemctl hibernate'
     }
@@ -45,6 +46,13 @@ if __name__ == '__main__':
         '--powermenu', 
         action='store_true',
         help='Whether this command is being called from the power button'
+    )
+
+    arg_parser.add_argument(
+        "-hy",
+        "--hyprland",
+        action="store_true",
+        help="Whether this command should use hyprctl"
     )
 
     args = arg_parser.parse_args()
