@@ -108,7 +108,9 @@
         "hyprland/window": {
             "format": "{}",
             "rewrite": {
-                "(.*) — Mozilla Firefox": " $1"
+                "(.*) - YouTube — Mozilla Firefox": "  $1",
+                "(.*) — Mozilla Firefox": " $1",
+                "(Alacritty)": "  $1"
             },
             "separate-outputs": true
         },
