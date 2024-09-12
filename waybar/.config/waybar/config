@@ -13,7 +13,7 @@
             "sway/scratchpad",
             "custom/media"
         ],
-        "modules-center": ["clock"],
+        "modules-center": ["hyprland/window"],
         "modules-right": [
             "custom/colorpicker",
             "custom/ime",
@@ -23,6 +23,7 @@
             "temperature",
             "network#wifi",
             "network#ethernet",
+            "clock",
             "custom/powermenu"
         ],
         "keyboard-state": {
@@ -86,11 +87,11 @@
                 "on-scroll"     : 1,
                 "on-click-right": "mode",
                 "format": {
-                    "months":     "<span color='#000000'><b>{}</b></span>",
-                    "days":       "<span color='#000000'><b>{}</b></span>",
+                    "months":     "<span color='#ffead3'><b>{}</b></span>",
+                    "days":       "<span color='#ecc6d9'><b>{}</b></span>",
                     "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                    "weekdays":   "<span color='#000000'><b>{}</b></span>",
-                    "today":      "<span color='#da4242'><b><u>{}</u></b></span>"
+                    "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                    "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
                 }
             },
             "on-scroll": {

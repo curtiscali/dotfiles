@@ -18,24 +18,9 @@ window#waybar {
     padding: 0px 5px 0px 5px;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
+#window {
+    color: #BCBCBD;
+    font-weight: bold;
 }
 
 button {
