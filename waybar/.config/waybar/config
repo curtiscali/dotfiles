@@ -13,7 +13,7 @@
             "sway/scratchpad",
             "custom/media"
         ],
-        "modules-center": ["hyprland/window"],
+        "modules-center": ["hyprland/window", "sway/window"],
         "modules-right": [
             "custom/colorpicker",
             "custom/ime",
@@ -97,6 +97,13 @@
             "on-scroll": {
                 "calendar": -1
             }
+        },
+        "sway/window": {
+            "format": "{title}",
+            "rewrite": {
+                "(.*) — Mozilla Firefox": " $1"
+            },
+            "separate-outputs": true
         },
         "hyprland/window": {
             "format": "{}",
