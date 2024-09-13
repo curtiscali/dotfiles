@@ -106,11 +106,12 @@
             "separate-outputs": true
         },
         "hyprland/window": {
-            "format": "{}",
+            "format": "{initialClass}",
             "rewrite": {
-                "(.*) - YouTube — Mozilla Firefox": "  $1",
-                "(.*) — Mozilla Firefox": " $1",
-                "(Alacritty)": "  $1"
+                //"(.*) - YouTube — Mozilla Firefox": "  $1",
+                "org.mozilla.firefox": " Mozilla Firefox",
+                "(Alacritty)": "  $1",
+                "pcmanfm": " PCManFM"
             },
             "separate-outputs": true
         },
