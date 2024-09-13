@@ -111,7 +111,10 @@
                 //"(.*) - YouTube — Mozilla Firefox": "  $1",
                 "org.mozilla.firefox": " Mozilla Firefox",
                 "(Alacritty)": "  $1",
-                "pcmanfm": " PCManFM"
+                "pcmanfm": " PCManFM",
+                "org.fcitx.fcitx5-config-qt": "  FCITX Config",
+                "org.pulseaudio.pavucontrol": " PavuControl",
+                "nm-connection-editor": " NM Conneciton Editor"
             },
             "separate-outputs": true
         },
