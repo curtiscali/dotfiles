@@ -15,7 +15,8 @@ window#waybar {
     color: #6c6d6f;
     transition-property: background-color;
     transition-duration: .5s;
-    padding: 0px 5px 0px 5px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #window {
@@ -29,6 +30,10 @@ button {
     /* Avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
+}
+
+#workspaces {
+    padding-left: 7px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -98,13 +103,12 @@ button:hover {
 
 }
 
-#window,
-#workspaces {
+#window {
     margin: 0 4px;
 }
 
 #custom-powermenu {
-    margin-right: 5px;
+    margin-right: 7px;
 }
 
 #custom-powermenu:hover,
@@ -116,7 +120,7 @@ button:hover {
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+    margin-left: 0px;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
