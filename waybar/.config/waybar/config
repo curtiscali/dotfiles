@@ -185,7 +185,7 @@
                "disconnected": "",
                "ethernet": "",
                "linked": ""
-           }, //["", ""],
+           },
            "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
            "on-click": "nm-connection-editor"
        },
@@ -198,7 +198,7 @@
                "wifi": "",
                "linked": "",
                "disconnected": ""
-           },//["", ""],
+           },
            "format-disconnected": "{icon} Disconnected",
            "tooltip-format": "{ifname}: {ipaddr}/{cidr} (Signal Strength: {signalStrength}%)",
            "on-click": "nm-connection-editor"
