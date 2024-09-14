@@ -1,7 +1,12 @@
+sort=-time
+layer=overlay
 font=Cantarell 11
 height=150
-background-color=#222222FF
-border-color=#444444FF
+background-color=#1B1C1FFF
+border-color=#3B3E44FF
+border-radius=7
+icons=1
+default-timeout=5000
 
 [!grouped]
 format=<b>%a</b>\n<b>%s</b>\n%b
