@@ -35,10 +35,6 @@ vim.keymap.set('i', '<S-Tab>', '<C-d>')
 -- Clear latest search
 vim.keymap.set('n', '<F3>', '<cmd>noh<cr>')
 
--- NvimTree Mappings
-vim.keymap.set('', '<F5>', '<cmd>NvimTreeToggle<cr>')
-vim.keymap.set('', '<F6>', '<cmd>NvimTreeFocus<cr>')
-
 -- Floaterm Mappings
 vim.keymap.set('n', '<F7>', '<cmd>FloatermNew<cr>', { silent = true })
 vim.keymap.set('t', '<F7>', '<cmd>FloatermNew<cr>', { silent = true })
@@ -78,3 +74,9 @@ vim.keymap.set('n', '<Leader>ff', '<cmd>Telescope find_files<cr>', { silent = tr
 vim.keymap.set('n', '<Leader>fg', '<cmd>Telescope live_grep<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope buffers<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>fh', '<cmd>Telescope help_tags<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>ft', '<cmd>Telescope filetypes<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>gf', '<cmd>Telescope git_files<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>gb', '<cmd>Telescope git_branches<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>gc', '<cmd>Telescope git_commits<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>gs', '<cmd>Telescope git_stash<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>tr', '<cmd>Telescope treesitter<cr>', { silent = true })

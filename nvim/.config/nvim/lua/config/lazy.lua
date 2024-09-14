@@ -79,11 +79,6 @@ require("lazy").setup({
         'voldikss/vim-floaterm'
     },
     {
-        'nvim-tree/nvim-tree.lua',
-	    dependencies = { 'nvim-tree/nvim-web-devicons' },
-        opts = {}
-    },
-    {
         'tanvirtin/vgit.nvim',
     	dependencies = { 'nvim-lua/plenary.nvim' },
         opts = {}
