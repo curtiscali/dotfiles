@@ -1,6 +1,4 @@
 prompt-text = "> "
-matching-algorithm = fuzzy
-terminal = alacritty
 
 text-color = #bcbcbd
 prompt-color = #bcbcbd

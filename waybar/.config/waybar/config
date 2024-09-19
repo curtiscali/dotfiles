@@ -64,7 +64,7 @@
         },
         "custom/powermenu": {
             "format": "",
-            "on-click": "python ~/.config/wofi/powermenu.py -p",
+            "on-click": "python ~/.config/tofi/powermenu.py -p",
             "exec-on-event": true,
             "tooltip": false
         },
@@ -114,7 +114,7 @@
                 "pcmanfm": " PCManFM",
                 "org.fcitx.fcitx5-config-qt": "  FCITX Config",
                 "org.pulseaudio.pavucontrol": " PavuControl",
-                "nm-connection-editor": " NM Conneciton Editor"
+                "nm-connection-editor": " NM Connection Editor"
             },
             "separate-outputs": true
         },
