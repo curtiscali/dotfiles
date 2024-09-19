@@ -109,7 +109,7 @@
             "format": "{initialClass}",
             "rewrite": {
                 //"(.*) - YouTube — Mozilla Firefox": "  $1",
-                "org.mozilla.firefox": " Mozilla Firefox",
+                "org.mozilla.firefox": " Mozilla Firefox",
                 "(Alacritty)": "  $1",
                 "pcmanfm": " PCManFM",
                 "org.fcitx.fcitx5-config-qt": "  FCITX Config",
@@ -123,7 +123,7 @@
             "all-outputs": true,
             "format": "{icon}",
             "format-icons": {
-                "1": "",
+                "1": "",
                 "2": "",
                 "3": "",
                 "4": "",
@@ -140,7 +140,7 @@
             "all-outputs": true,
             "format": "{icon}",
             "format-icons": {
-                "1": "",
+                "1": "",
                 "2": "",
                 "3": "",
                 "4": "",

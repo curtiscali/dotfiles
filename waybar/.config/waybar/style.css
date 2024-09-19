@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Cantarell,
+    font-family: "Inter Variable",
         "FontAwesome 6 Free", 
         "FontAwesome 6 Brands",
         Roboto, 
@@ -91,7 +91,7 @@ button:hover {
 #custom-media {
     padding: 0 5px;
     color: #BCBCBD;
-    font-family: Cantarell,
+    font-family: "Inter Variable",
         "FontAwesome 6 Free", 
         "FontAwesome 6 Brands",
         Roboto, 
@@ -217,7 +217,7 @@ label:focus {
 }
 
 #language {
-    font-family: Cantarell;
+    font-family: "Inter Variable";
     font-weight: bold;
     color: white;
     padding: 0 5px;
