@@ -74,6 +74,7 @@ function configure_sway_ime() {
 function configure_window_settings() {
     if [[ $1 == "sway" ]]; then
         gsettings set org.gnome.desktop.wm.preferences button-layout ""
+        gsettings set org.gnome.desktop.interface color-scheme prefer-light
     else
         gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
     fi
