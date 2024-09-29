@@ -13,8 +13,6 @@
 window#waybar {
     background-color: #1b1c1f;
     color: #6c6d6f;
-    transition-property: background-color;
-    transition-duration: .5s;
     padding-left: 8px;
     padding-right: 8px;
 }
