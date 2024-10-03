@@ -76,22 +76,20 @@
             "format": "{:%b %d %H:%M}",
             "timezone": "America/Los_Angeles",
             "tooltip": true,
-            "tooltip-format": "<tt>{calendar}</tt>",
+            "tooltip-format": "<span font='JetBrains Mono' size='14pt'>{calendar}</span>",
             "format-alt": "{:%B %d %Y %H:%M}",
             "on-click-right": "mode",
             "format-calendar": "<span color='#1B1C1F'><b>{}</b></span>",
             "format-calendar-weekdays": "<span color='#1B1C1F'><b>{}</b></span>",
             "calendar": {
-                "mode"          : "year",
-                "mode-mon-col"  : 3,
                 "on-scroll"     : 1,
                 "on-click-right": "mode",
                 "format": {
                     "months":     "<span color='#ffead3'><b>{}</b></span>",
-                    "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                    "days":       "<span color='#BCBCBD'><b>{}</b></span>",
                     "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                    "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                    "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                    "weekdays":   "<span color='#FFCF91'><b>{}</b></span>",
+                    "today":      "<span color='#ffffff'><b><u>{}</u></b></span>"
                 }
             },
             "on-scroll": {
@@ -108,7 +106,6 @@
         "hyprland/window": {
             "format": "{initialClass}",
             "rewrite": {
-                //"(.*) - YouTube — Mozilla Firefox": "  $1",
                 "org.mozilla.firefox": " Mozilla Firefox",
                 "(Alacritty)": "  $1",
                 "pcmanfm": " PCManFM",
@@ -124,8 +121,8 @@
             "format": "{icon}",
             "format-icons": {
                 "1": "",
-                "2": "",
-                "3": "",
+                "2": "",
+                "3": "",
                 "4": "",
                 "5": "5",
                 "6": "6",
@@ -141,8 +138,8 @@
             "format": "{icon}",
             "format-icons": {
                 "1": "",
-                "2": "",
-                "3": "",
+                "2": "",
+                "3": "",
                 "4": "",
                 "5": "5",
                 "6": "6",

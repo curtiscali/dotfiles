@@ -3,9 +3,6 @@
     font-family: "Inter Variable",
         "FontAwesome 6 Free", 
         "FontAwesome 6 Brands",
-        Roboto, 
-        Helvetica, 
-        Arial, 
         sans-serif;
     font-size: 17.5px;
 }
@@ -92,9 +89,6 @@ button:hover {
     font-family: "Inter Variable",
         "FontAwesome 6 Free", 
         "FontAwesome 6 Brands",
-        Roboto, 
-        Helvetica, 
-        Arial, 
         sans-serif;
     font-weight: bold;
     background-color: transparent;
