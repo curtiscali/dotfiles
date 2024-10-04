@@ -1,4 +1,5 @@
 #!/bin/bash
 
-hypridle & hyprlock
+pidof hypridle || hypridle;
+pidof hyprlock || hyprlock -q
 kill %%;
