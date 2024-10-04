@@ -16,7 +16,10 @@ Just some dotfiles containing common configurations for linux and MacOS systems 
 * [Mako Notifications](https://github.com/emersion/mako)
 * Vim
 * Neovim
+* Hyprland
 
+### Hyprland
+Be sure utilities such as hypridle, hyprpaper, & hyprlock are installed in addition to hypland
 
 ### Vim
 Ensure that [Vim Plug](https://github.com/junegunn/vim-plug) is installed.
@@ -51,3 +54,10 @@ To do so, simply run `stow *` to install all config files or `stow <name of modu
 * alacritty 
 * wofi
 * mako
+* hyprland
+* ssh
+* systemd
+
+## Notes for SSH & Systemd Config
+Following the guide [here](https://www.lorenzobettini.it/2023/09/hyprland-and-ssh-agent/), be sure to run `systemctl enable --user ssh-agent.service` after you've done stow for your SSH & Systemd services.
+
