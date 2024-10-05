@@ -57,6 +57,7 @@ dynamic_title = true
 resize_increments = true
 startup_mode = "Windowed"
 dynamic_padding = true
+padding = { x = 5, y = 0 }
 
 [window.class]
 general = "Alacritty"
