@@ -64,7 +64,7 @@
         },
         "custom/powermenu": {
             "format": "",
-            "on-click": "python ~/.config/tofi/powermenu.py -p",
+            "on-click": "wlogout -b 3",
             "exec-on-event": true,
             "tooltip": false
         },
