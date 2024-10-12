@@ -5,7 +5,7 @@ terminal = alacritty
 text-color = #bcbcbd
 prompt-color = #bcbcbd
 selection-color = #ffffff
-background-color = #1B1c1fff
+background-color = #161719ff
 border-color = #3b3e44
 
 width = 30%
@@ -17,3 +17,5 @@ num-results = 8
 font = "Inter Variable"
 font-variations = "wght 600"
 font-size = 24
+
+history = true
