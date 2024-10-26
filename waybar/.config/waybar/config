@@ -109,6 +109,7 @@
                 "org.mozilla.firefox": " Mozilla Firefox",
                 "(Alacritty)": "  $1",
                 "pcmanfm": " PCManFM",
+                "org.gnome.Nautilus": " Nautilus",
                 "org.fcitx.fcitx5-config-qt": "  FCITX Config",
                 "org.pulseaudio.pavucontrol": " PavuControl",
                 "nm-connection-editor": " NM Connection Editor"
