@@ -1,5 +1,11 @@
 . "$HOME/.cargo/env" 
 
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:-1,fg+:#d4d4d4,bg:-1,bg+:#1e1e1e
+  --color=hl:#569cd6,hl+:#56b6c2,info:#dcdcaa,marker:#608b4e
+  --color=prompt:#608b4e,spinner:#dcdcaa,pointer:#f44747,header:#87afaf
+  --color=border:#262626,label:#aeaeae,query:#d9d9d9'
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
