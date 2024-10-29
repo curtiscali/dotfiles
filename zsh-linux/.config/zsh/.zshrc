@@ -1,5 +1,8 @@
 . "$HOME/.cargo/env" 
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 # Get the filename to store/lookup the environment from
 ssh_env_cache="$HOME/.ssh/environment-$SHORT_HOST"
 
