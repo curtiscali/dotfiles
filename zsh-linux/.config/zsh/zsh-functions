@@ -65,6 +65,7 @@ function configure_sway_ime() {
         echo "Please run this function as root"
     else
         sudo cat /home/cucali/.config/zsh/input-config-sway > /etc/environment
+        gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'fcitx'>}"
         if [ $? -eq 0 ]; then
             echo "Successfully configured Sway IME"
         fi

@@ -1,4 +1,4 @@
-GTK_IM_MODULE=ibus
+GTK_IM_MODULE=ibx
 QT_IM_MODULE=ibus
 XMODIFIERS=@im=ibus
 GLFW_IM_MODULE="ibus"
