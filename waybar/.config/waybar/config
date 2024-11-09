@@ -112,7 +112,8 @@
                 "org.gnome.Nautilus": " Nautilus",
                 "org.fcitx.fcitx5-config-qt": "  FCITX Config",
                 "org.pulseaudio.pavucontrol": " PavuControl",
-                "nm-connection-editor": " NM Connection Editor"
+                "nm-connection-editor": " NM Connection Editor",
+                "steam": " Steam"
             },
             "separate-outputs": true
         },
@@ -141,8 +142,8 @@
                 "1": "",
                 "2": "",
                 "3": "",
-                "4": "",
-                "5": "5",
+                "4": "",
+                "5": "",
                 "6": "6",
                 "7": "7",
                 "8": "8",
