@@ -106,6 +106,7 @@
         "hyprland/window": {
             "format": "{title}",
             "rewrite": {
+                "(.*) - (YouTube)(.*)": " Firefox",
                 "(.*) (.*) (Mozilla Firefox)": " $1",
                 "(Alacritty)": "  $1",
                 "Fcitx Configuration": "  FCITX Configuration",
@@ -220,7 +221,7 @@
             "on-click": "pavucontrol"
         },
         "custom/media": {
-            "format": "{0} {1}",
+            "format": "{0}",
             "return-type": "json",
             "max-length": 40,
             "on-click": "playerctl play-pause",
