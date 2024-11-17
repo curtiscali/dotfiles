@@ -104,15 +104,13 @@
             "separate-outputs": true
         },
         "hyprland/window": {
-            "format": "{initialClass}",
+            "format": "{title}",
             "rewrite": {
-                "org.mozilla.firefox": " Mozilla Firefox",
+                "(.*) (.*) (Mozilla Firefox)": " $1",
                 "(Alacritty)": "  $1",
-                "pcmanfm": " PCManFM",
-                "org.gnome.Nautilus": " Nautilus",
-                "org.fcitx.fcitx5-config-qt": "  FCITX Config",
-                "org.pulseaudio.pavucontrol": " PavuControl",
-                "nm-connection-editor": " NM Connection Editor",
+                "Fcitx Configuration": "  FCITX Configuration",
+                "Volume Control": "  Audio Configuration",
+                "(Network Connections)": " $1",
                 "steam": " Steam"
             },
             "separate-outputs": true
