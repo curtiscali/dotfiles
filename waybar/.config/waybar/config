@@ -106,7 +106,7 @@
         "hyprland/window": {
             "format": "{initialClass}",
             "rewrite": {
-                "org.mozilla.firefox": " Mozilla Firefox",
+                "org.mozilla.firefox": " Mozilla Firefox",
                 "(Alacritty)": "  $1",
                 "pcmanfm": " PCManFM",
                 "org.gnome.Nautilus": " Nautilus",
@@ -122,7 +122,7 @@
             "all-outputs": true,
             "format": "{icon}",
             "format-icons": {
-                "1": "",
+                "1": "",
                 "2": "",
                 "3": "",
                 "4": "",
@@ -139,7 +139,7 @@
             "all-outputs": true,
             "format": "{icon}",
             "format-icons": {
-                "1": "",
+                "1": "",
                 "2": "",
                 "3": "",
                 "4": "",
