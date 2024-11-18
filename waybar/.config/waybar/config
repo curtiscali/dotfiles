@@ -58,6 +58,7 @@
             "return-type": "json",
             "format": "{}",
             "restart-interval": 1,
+            "on-click": "python $HOME/.config/waybar/scripts/cycle-fcitx5-ime.py",
             "on-click-right": "fcitx5-configtool",
             "exec-on-event": true,
             "tooltip": false
