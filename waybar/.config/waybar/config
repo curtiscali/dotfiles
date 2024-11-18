@@ -13,7 +13,7 @@
             "sway/scratchpad",
             "custom/media"
         ],
-        "modules-center": ["hyprland/window", "sway/window"],
+        "modules-center": ["clock"],
         "modules-right": [
             "custom/colorpicker",
             "custom/ime",
@@ -23,7 +23,6 @@
             "temperature",
             "network#wifi",
             "network#ethernet",
-            "clock",
             "custom/powermenu"
         ],
         "keyboard-state": {
@@ -75,11 +74,11 @@
             "spacing": 10
         },
         "clock": {
-            "format": "{:%b %d %H:%M}",
+            "format": "{:%a %b %d %H:%M}",
             "timezone": "America/Los_Angeles",
             "tooltip": true,
             "tooltip-format": "<span font='JetBrains Mono' size='14pt'>{calendar}</span>",
-            "format-alt": "{:%B %d %Y %H:%M}",
+            "format-alt": "{:%A %B %d %Y %H:%M}",
             "on-click-right": "mode",
             "format-calendar": "<span color='#1B1C1F'><b>{}</b></span>",
             "format-calendar-weekdays": "<span color='#1B1C1F'><b>{}</b></span>",
@@ -97,27 +96,6 @@
             "on-scroll": {
                 "calendar": -1
             }
-        },
-        "sway/window": {
-            "format": "{title}",
-            "rewrite": {
-                "(.*) — Mozilla Firefox": " $1"
-            },
-            "separate-outputs": true
-        },
-        "hyprland/window": {
-            "format": "{title}",
-            "max-length": 55,
-            "rewrite": {
-                "(.*) - (YouTube)(.*)": " Firefox",
-                "(.*) (.*) (Mozilla Firefox)": " $1",
-                "(Alacritty)": "  $1",
-                "Fcitx Configuration": "  FCITX Configuration",
-                "Volume Control": "  Audio Configuration",
-                "(Network Connections)": " $1",
-                "steam": " Steam"
-            },
-            "separate-outputs": true
         },
         "sway/workspaces": {
             "disable-scroll": true,
