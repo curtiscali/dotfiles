@@ -1,7 +1,6 @@
 import subprocess
 import time
 import json
-import sys
 
 ime_labels = {
     'keyboard-us': 'EN',

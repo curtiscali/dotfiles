@@ -59,6 +59,7 @@
             "restart-interval": 1,
             "on-scroll-up": "python $HOME/.config/waybar/scripts/cycle-fcitx5-ime.py -d",
             "on-scroll-down": "python $HOME/.config/waybar/scripts/cycle-fcitx5-ime.py -u",
+            "on-click": "python $HOME/.config/waybar/scripts/fcitx5-show-input-methods.py",
             "on-click-right": "fcitx5-configtool",
             "exec-on-event": true,
             "tooltip": false
