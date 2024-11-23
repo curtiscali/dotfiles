@@ -9,8 +9,6 @@ ime_labels = {
     'Simplified Chinese (简体中文)': 'pinyin'
 }
 
-ime_labels_inverted = {ime_labels[key]: key for key in ime_labels}
-
 home_dir = os.path.expanduser('~')
 config = configparser.ConfigParser()
 config.read([home_dir + '/.config/fcitx5/profile'])
