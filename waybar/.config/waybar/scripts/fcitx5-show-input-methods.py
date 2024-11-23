@@ -9,6 +9,8 @@ ime_labels = {
     'Simplified Chinese (简体中文)': 'pinyin'
 }
 
+ime_labels_reversed = {ime_labels[key]: key for key in ime_labels}
+
 home_dir = os.path.expanduser('~')
 config = configparser.ConfigParser()
 config.read([home_dir + '/.config/fcitx5/profile'])
@@ -20,7 +22,7 @@ for section in config.sections():
     if items_exp.match(section) != None:
         input_methods.append(config[section]['Name'])
 
-echo = subprocess.Popen(['echo', '\n'.join(ime_labels.keys())], stdout=subprocess.PIPE)
+echo = subprocess.Popen(['echo', '\n'.join([ime_labels_reversed[im] for im in input_methods])], stdout=subprocess.PIPE)
 tofi = subprocess.Popen([
     'tofi', 
     '--anchor', 'center'
