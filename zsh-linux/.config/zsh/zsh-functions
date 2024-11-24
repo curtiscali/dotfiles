@@ -199,3 +199,8 @@ function run_updates() {
     done
 }
 
+function hypr_restart_bg_command() {
+    local cmd=$1
+
+    killall $cmd && hyprctl dispatch exec $cmd
+}
