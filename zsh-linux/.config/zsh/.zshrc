@@ -86,6 +86,7 @@ export PATH="$HOME/.local/bin:$HOME/bin:$HOME/gems/bin:$HOME/.cargo/bin:$PATH"
 local lifetime=3600
 
 # start ssh-agent and setup environment
+
 ssh-agent -s ${lifetime:+-t} ${lifetime} | sed '/^echo/d' >! "$ssh_env_cache"
 chmod 600 "$ssh_env_cache"
 . "$ssh_env_cache" > /dev/null
