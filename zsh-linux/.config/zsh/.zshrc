@@ -79,7 +79,7 @@ bindkey '^e' edit-command-line
 
 # Add Code to enable proper functioning of Ruby Gems (Needed for Jekyll Dev)
 export GEM_HOME="$HOME/gems"
-export PATH="$HOME/.local/bin:$HOME/bin:$HOME/gems/bin:$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/bin:$HOME/gems/bin:$HOME/.cargo/bin:/usr/local/go/bin:$PATH"
 
 # Start SSH Agent
 # Set a maximum lifetime for identities added to ssh-agent
