@@ -97,6 +97,12 @@ require("lazy").setup({
     {
         'neoclide/coc.nvim',
         branch = 'release'
+    },
+    {
+        'norcalli/nvim-colorizer.lua',
+        config = function()
+            require('colorizer').setup()
+        end
     }
   },
   -- Configure any other settings here. See the documentation for more details.
