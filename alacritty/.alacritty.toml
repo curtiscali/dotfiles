@@ -1,36 +1,13 @@
 [terminal.shell]
 program = "/usr/bin/zsh"
 
+[general]
+import = [
+    "~/.config/alacritty/dark_plus.toml"
+]
+
 [colors]
 draw_bold_text_with_bright_colors = false
-
-[colors.bright]
-black = "#545454"
-blue = "#569cd6"
-cyan = "#56b6c2"
-green = "#608b4e"
-magenta = "#c678dd"
-red = "#f44747"
-white = "#d4d4d4"
-yellow = "#dcdcaa"
-
-[colors.cursor]
-cursor = "#d4d4d4"
-text = "#d4d4d4"
-
-[colors.normal]
-black = "#1e1e1e"
-blue = "#569cd6"
-cyan = "#56b6c2"
-green = "#608b4e"
-magenta = "#c678dd"
-red = "#f44747"
-white = "#d4d4d4"
-yellow = "#dcdcaa"
-
-[colors.primary]
-background = "#1e1e1e"
-foreground = "#d4d4d4"
 
 [font]
 size = 12.0
@@ -57,7 +34,6 @@ dynamic_title = true
 resize_increments = true
 startup_mode = "Windowed"
 dynamic_padding = true
-padding = { x = 5, y = 0 }
 
 [window.class]
 general = "Alacritty"
