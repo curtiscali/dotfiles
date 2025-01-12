@@ -78,6 +78,7 @@ function configure_window_settings() {
         gsettings set org.gnome.desktop.interface color-scheme prefer-light
     else
         gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+        gsettings set org.gnome.desktop.interface color-scheme default
     fi
 }
 
