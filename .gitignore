@@ -1,4 +1,5 @@
 zsh-linux/.config/zsh/plugins/*
+zsh-linux/plugins/*
 **/.zcompdump
 nvim/.config/nvim/plugin/*
 nvim/.config/nvim/plugged/*

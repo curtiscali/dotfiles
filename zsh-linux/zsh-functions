@@ -202,6 +202,11 @@ function run_updates() {
 
 function hypr_restart_bg_command() {
     local cmd=$1
+    pidof -q $cmd
 
-    killall $cmd && hyprctl dispatch exec $cmd
+    if [[ $? != 1 ]] then
+        killall $cmd
+    fi
+
+    hyprctl dispatch exec $cmd
 }

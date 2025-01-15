@@ -12,7 +12,7 @@ source <(fzf --zsh)
 # Get the filename to store/lookup the environment from
 ssh_env_cache="$HOME/.ssh/environment-$SHORT_HOST"
 
-export ZDOTDIR=$HOME/.config/zsh
+export ZDOTDIR=$HOME
 export SUDO_EDITOR=nvim
 export EDITOR=nvim
 export BAT_THEME="Visual Studio Dark+"
