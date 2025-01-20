@@ -18,9 +18,7 @@
             "custom/colorpicker",
             "custom/ime",
             "pulseaudio",
-            "cpu",
-            "memory",
-            "temperature",
+            "group/hardware",
             "network#wifi",
             "network#ethernet",
             "custom/powermenu"
@@ -143,6 +141,23 @@
             "format": "{temperatureC}°C {icon}",
             "format-icons": ["", "", ""],
             "tooltip-format": "CPU Temperature: {temperatureC}°C"
+        },
+        "custom/hardware-wrap": {
+            "format": " Hardware",
+            "tooltip": "Hardware Monitoring Info",
+        },
+        "group/hardware": {
+            "orientation": "horizontal",
+            "drawer": {
+                "transition-duration": 500,
+                "transition-left-to-right": false
+            },
+            "modules": [
+                "custom/hardware-wrap",
+                "cpu",
+                "memory",
+                "temperature"
+            ]
         },
         "backlight": {
             // "device": "acpi_video1",
