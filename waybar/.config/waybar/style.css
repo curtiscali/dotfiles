@@ -106,7 +106,10 @@ button:hover {
 
 #custom-powermenu:hover,
 #custom-colorpicker:hover,
-#custom-ime:hover {
+#custom-ime:hover,
+#custom-hardware-wrap:hover,
+#pulseaudio:hover,
+#network:hover {
     background-color: #424446;
     color: white;
 }
