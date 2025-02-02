@@ -144,7 +144,8 @@
         },
         "custom/hardware-wrap": {
             "format": " Hardware",
-            "tooltip": "Hardware Monitoring Info",
+            "tooltip": true,
+            "tooltip-format": "Hardware Monitoring Info",
         },
         "group/hardware": {
             "orientation": "horizontal",

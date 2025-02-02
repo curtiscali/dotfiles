@@ -185,19 +185,29 @@ function sudo_command_line() {
 }
 
 function run_updates() {
-    PS3="Select which updates you'd like to run: "
-    items=("DNF" "Flatpak" "Both")
-
-    select item in "${items[@]}" Quit
-    do
-        case $REPLY in
-            1) check_dnf_updates; break;;
-            2) flatpak update; break;;
-            3) check_dnf_updates && echo && echo && flatpak update; break;;
-            $((${#items[@]} + 1))) break;;
-            *) echo "Invalid reply";
+    if [ -n "$1" ]; then
+        case "$1" in
+            dnf) check_dnf_updates;;
+            flatpak) flatpak update;;
+            all) check_dnf_updates && echo && echo && flatpak update;;
+            *) echo "$1 is not a supported package manager";
         esac
-    done
+    else
+        PS3="Select which updates you'd like to run: "
+        items=("DNF" "Flatpak" "Both")
+
+        select item in "${items[@]}" Quit
+        do
+            case $REPLY in
+                1) check_dnf_updates; break;;
+                2) flatpak update; break;;
+                3) check_dnf_updates && echo && echo && flatpak update; break;;
+                $((${#items[@]} + 1))) break;;
+                *) echo "invalid reply";
+            esac
+        done
+    fi
+
 }
 
 function hypr_restart_bg_command() {
