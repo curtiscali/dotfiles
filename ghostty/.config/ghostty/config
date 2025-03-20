@@ -21,6 +21,8 @@
 # # separated by equals signs.
 font-family = "JetBrains Mono Nerd Font"
 theme = Dark+
+window-width = 130
+window-height = 40
 # window-padding-x = 2
 #
 # # Spacing around the equals sign does not matter.
