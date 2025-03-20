@@ -19,7 +19,7 @@
 # ==========================
 # # The config file consists of simple key-value pairs,
 # # separated by equals signs.
-font-family = "JetBrains Mono Nerd Font"
+font-family = "JetBrainsMono Nerd Font"
 theme = Dark+
 window-width = 130
 window-height = 40
