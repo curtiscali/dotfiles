@@ -23,6 +23,8 @@ font-family = "JetBrainsMono Nerd Font"
 theme = Dark+
 window-width = 130
 window-height = 40
+window-save-state = always
+shell-integration-features = true
 # window-padding-x = 2
 #
 # # Spacing around the equals sign does not matter.
